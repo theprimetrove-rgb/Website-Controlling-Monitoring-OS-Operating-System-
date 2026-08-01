@@ -1560,13 +1560,17 @@ section.final{display:none!important}
         </div>
       </div>
 
-      <form class="v13-contact-form" id="clientRequestForm" novalidate>
+      <form class="v13-contact-form" id="clientRequestForm" action="https://formsubmit.co/theprimetrove@gmail.com" method="POST">
         <div class="v13-form-heading">
           <span id="requestBadge">GENERAL ENQUIRY</span>
           <h3 id="requestHeading">Tell us about your business</h3>
         </div>
 
         <input type="hidden" id="requestType" name="requestType" value="General enquiry">
+        <input type="hidden" name="_subject" value="New RestaurantOS website enquiry">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_autoresponse" value="Thank you for contacting The Prime Trove. We have received your request and will reply as soon as possible.">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
 
         <div class="v13-field-grid">
           <label>Company / business name
@@ -1609,13 +1613,7 @@ section.final{display:none!important}
 
         <div class="v13-form-actions">
           <button type="submit">Submit request</button>
-          <small>This self-contained presentation stores the request safely in your browser and prepares it for sending. Connect Formspree, EmailJS or your own server before publishing to receive submissions automatically.</small>
-        </div>
-
-        <div class="v13-form-success" id="formSuccess" hidden>
-          <b>Request prepared successfully.</b>
-          <p>Your details have been saved in this browser. Please email the generated request to <strong>theprimetrove@gmail.com</strong>.</p>
-          <button type="button" id="copyRequest">Copy request details</button>
+          <small>Your request will be sent securely to <strong>theprimetrove@gmail.com</strong>. After the first test submission, confirm the activation email from FormSubmit.</small>
         </div>
       </form>
     </div>
@@ -1926,8 +1924,6 @@ section.final{display:none!important}
   const badge = document.getElementById('requestBadge');
   const heading = document.getElementById('requestHeading');
   const message = document.getElementById('requestMessage');
-  const success = document.getElementById('formSuccess');
-  const copyButton = document.getElementById('copyRequest');
 
   const presets = {
     demo: {
@@ -1967,45 +1963,6 @@ section.final{display:none!important}
     });
   });
 
-  form?.addEventListener('submit', event => {
-    event.preventDefault();
-    if(!form.checkValidity()){
-      form.reportValidity();
-      return;
-    }
-    const data = Object.fromEntries(new FormData(form).entries());
-    data.createdAt = new Date().toISOString();
-    localStorage.setItem('restaurantOSClientRequest', JSON.stringify(data));
-    success.hidden = false;
-    success.scrollIntoView({behavior:'smooth', block:'nearest'});
-  });
-
-  copyButton?.addEventListener('click', async () => {
-    const data = Object.fromEntries(new FormData(form).entries());
-    const lines = [
-      'RestaurantOS Client Request',
-      '---------------------------',
-      'Request type: ' + (data.requestType || ''),
-      'Company: ' + (data.company || ''),
-      'Contact: ' + (data.contactName || ''),
-      'Email: ' + (data.email || ''),
-      'Phone / WhatsApp: ' + (data.phone || ''),
-      'Business type: ' + (data.businessType || ''),
-      'Branches: ' + (data.branches || ''),
-      'Country: ' + (data.country || ''),
-      'Website: ' + (data.website || ''),
-      '',
-      'Message:',
-      data.message || ''
-    ];
-    try{
-      await navigator.clipboard.writeText(lines.join('\n'));
-      copyButton.textContent = 'Copied';
-      setTimeout(() => copyButton.textContent = 'Copy request details', 1800);
-    }catch(error){
-      alert(lines.join('\n'));
-    }
-  });
 
   // Restore draft if present.
   try{
