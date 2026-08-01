@@ -1078,6 +1078,15 @@ section.final{display:none!important}
   .v13-admin-top,.v13-admin-section-head{flex-direction:column;align-items:flex-start}
 }
 
+
+.email-submit-success{
+  margin-bottom:18px;padding:15px 17px;border:1px solid #79b99e;border-radius:12px;
+  background:#e9f7f0;color:#0b563d;display:grid;gap:4px
+}
+.email-submit-success strong{font-size:15px}
+.email-submit-success span{font-size:13px}
+.v13-contact-form button[type="submit"][disabled]{opacity:.65;cursor:wait}
+
 </style>
 
 <style id="premium-latest-overrides">
@@ -1561,15 +1570,24 @@ section.final{display:none!important}
       </div>
 
       <form class="v13-contact-form" id="clientRequestForm" action="https://formsubmit.co/theprimetrove@gmail.com" method="POST">
+        
+        <div id="emailSubmissionSuccess" class="email-submit-success" hidden>
+          <strong>Thank you — your request was sent successfully.</strong>
+          <span>We received your enquiry at theprimetrove@gmail.com and will contact you soon.</span>
+        </div>
+
         <div class="v13-form-heading">
           <span id="requestBadge">GENERAL ENQUIRY</span>
           <h3 id="requestHeading">Tell us about your business</h3>
         </div>
 
         <input type="hidden" id="requestType" name="requestType" value="General enquiry">
-        <input type="hidden" name="_subject" value="New RestaurantOS website enquiry">
+        
+        <input type="hidden" name="_subject" value="New enquiry from the RestaurantOS website">
         <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_autoresponse" value="Thank you for contacting The Prime Trove. We have received your request and will reply as soon as possible.">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://theprimetrove-rgb.github.io/Website-Controlling-Monitoring-OS-Operating-System-/?submitted=1#contact">
+        <input type="hidden" name="_autoresponse" value="Thank you for contacting The Prime Trove. We received your request and will respond as soon as possible.">
         <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
 
         <div class="v13-field-grid">
@@ -1974,6 +1992,31 @@ section.final{display:none!important}
       });
     }
   }catch(error){}
+})();
+</script>
+
+
+<script>
+(function(){
+  const form = document.getElementById('clientRequestForm');
+  const success = document.getElementById('emailSubmissionSuccess');
+  const params = new URLSearchParams(window.location.search);
+
+  if (params.get('submitted') === '1' && success) {
+    success.hidden = false;
+    try { localStorage.removeItem('restaurantOSClientRequest'); } catch (e) {}
+    history.replaceState({}, document.title, window.location.pathname + '#contact');
+  }
+
+  if (form) {
+    form.addEventListener('submit', function(){
+      const button = form.querySelector('button[type="submit"]');
+      if (button) {
+        button.disabled = true;
+        button.textContent = 'Sending request...';
+      }
+    });
+  }
 })();
 </script>
 
