@@ -2770,7 +2770,6 @@ body{padding-bottom:88px}
   .pt-flow-step-labels{scroll-behavior:smooth!important;overscroll-behavior-x:contain!important}
 }
 </style>
-
 <style id="build14-mobile-gap-removal-polish">
 /* BUILD 14 — mobile-only vertical rhythm and empty-space cleanup */
 @media (max-width: 700px){
@@ -3017,8 +3016,6 @@ body{padding-bottom:88px}
   }
 }
 </style>
-
-
 <style id="build15-mobile-hero-complete-compact">
 /* BUILD 15 — complete mobile hero dashboard + tighter page rhythm */
 @media (max-width:700px){
@@ -3124,8 +3121,6 @@ body{padding-bottom:88px}
   .pt-flow-canvas{height:410px!important;min-height:410px!important}
 }
 </style>
-
-
 <style id="build16-visual-editions">
 /* Build 16: visual business-edition showcase */
 .visual-edition-card{padding:0!important;overflow:hidden!important;background:#fff!important;border-radius:24px!important;position:relative;isolation:isolate}
@@ -3154,6 +3149,507 @@ body{padding-bottom:88px}
   .visual-edition-dots button.active{width:24px;background:#0b6a4b}
 }
 </style>
+<style>
+/* BUILD 17 — clearer copy and visual-first story */
+.enterprise-trust{padding:28px 0 44px!important}
+.enterprise-trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px!important}
+.trust-point{display:flex!important;align-items:center;gap:12px;padding:17px 16px!important;background:#fff;border:1px solid #dce6e1;border-radius:16px;min-height:auto!important}
+.trust-point>i{width:38px;height:38px;flex:0 0 38px;display:grid;place-items:center;border-radius:12px;background:#e7f4ed;color:#0b6849;font-style:normal;font-weight:900;font-size:18px}
+.trust-point>span{display:block!important}.trust-point strong{display:block;font-size:15px;line-height:1.15}.trust-point small{display:block;color:#718078;font-size:11px;line-height:1.45;margin-top:4px}
+.visual-edition-card{position:relative;isolation:isolate}
+.solution-visual{position:relative;overflow:hidden}
+.solution-visual svg{transition:transform .75s cubic-bezier(.2,.8,.2,1),filter .75s ease;transform-origin:center}
+.visual-edition-card:hover .solution-visual svg,.visual-edition-card:focus-visible .solution-visual svg{transform:scale(1.035);filter:saturate(1.05) contrast(1.02)}
+.visual-benefit-pill{position:absolute;left:18px;bottom:18px;z-index:3;padding:9px 12px;border-radius:999px;background:rgba(7,40,30,.82);backdrop-filter:blur(10px);color:#fff;font-size:11px;font-weight:900;letter-spacing:.01em;border:1px solid rgba(255,255,255,.24);box-shadow:0 10px 28px rgba(0,0,0,.18)}
+.visual-edition-card:nth-child(2) .visual-benefit-pill,.visual-edition-card:nth-child(3) .visual-benefit-pill{background:rgba(255,255,255,.88);color:#0b513b;border-color:rgba(11,81,59,.14)}
+.visual-edition-copy p{font-size:12px!important;color:#68776f!important}
+@media(max-width:820px){
+  .enterprise-trust{padding:18px 0 28px!important}
+  .enterprise-trust-grid{grid-template-columns:1fr 1fr!important;gap:8px!important}
+  .trust-point{padding:11px!important;gap:9px;border-radius:13px}
+  .trust-point>i{width:31px;height:31px;flex-basis:31px;font-size:14px;border-radius:9px}
+  .trust-point strong{font-size:12px}.trust-point small{display:none!important}
+  .enterprise-industry-bar{padding-bottom:20px!important}
+  .enterprise-industry-bar-inner{gap:8px!important}
+  .industry-heading{font-size:12px!important;letter-spacing:.13em}
+  .visual-benefit-pill{left:12px;bottom:12px;font-size:10px;padding:7px 9px}
+  .visual-edition-copy{padding:13px 14px!important}
+  .visual-edition-copy h3{font-size:21px!important}
+  .v11-title{letter-spacing:-.025em!important}
+}
+@media(prefers-reduced-motion:no-preference){
+  .visual-edition-card.is-seen .solution-visual svg{animation:build17VisualIn .8s cubic-bezier(.2,.8,.2,1) both}
+  @keyframes build17VisualIn{from{transform:scale(1.06);opacity:.72}to{transform:scale(1);opacity:1}}
+}
+</style>
+<style id="pt-build-18-workflow">
+.pt-flow{
+  padding:100px 0;
+  background:
+    radial-gradient(circle at 12% 16%,rgba(226,170,59,.12),transparent 25%),
+    radial-gradient(circle at 88% 84%,rgba(29,145,99,.12),transparent 28%),
+    #071f18;
+  color:#fff;
+  overflow:hidden;
+}
+.pt-flow .v11-title{color:#fff;max-width:900px}
+.pt-flow .v11-subtitle{color:#bfd2c9;max-width:780px}
+.pt-flow .v11-eyebrow{color:#efbd55}
+.pt-flow-shell{
+  position:relative;
+  margin-top:42px;
+  padding:34px;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:28px;
+  background:rgba(255,255,255,.055);
+  box-shadow:0 32px 100px rgba(0,0,0,.34);
+  backdrop-filter:blur(16px);
+}
+.pt-flow-live{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:8px 12px;
+  border-radius:999px;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.12);
+  color:#dcebe4;
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+}
+.pt-flow-live i{
+  width:9px;height:9px;border-radius:50%;background:#33d68b;
+  box-shadow:0 0 0 0 rgba(51,214,139,.5);
+  animation:ptLivePulse 1.8s infinite;
+}
+.pt-flow-track{
+  display:grid;
+  grid-template-columns:repeat(11,minmax(0,1fr));
+  align-items:center;
+  gap:10px;
+  margin-top:28px;
+}
+.pt-flow-step{
+  grid-column:span 1;
+  min-width:0;
+  min-height:178px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:18px 12px;
+  border-radius:20px;
+  border:1px solid rgba(255,255,255,.12);
+  background:linear-gradient(180deg,rgba(255,255,255,.10),rgba(255,255,255,.045));
+  opacity:.45;
+  transform:translateY(8px) scale(.97);
+  animation:ptStepCycle 12s infinite;
+}
+.pt-flow-step b{font-size:15px;margin-top:12px}
+.pt-flow-step small{display:block;color:#9fb8ad;font-size:11px;line-height:1.45;margin-top:6px}
+.pt-flow-icon{
+  width:48px;height:48px;border-radius:15px;display:grid;place-items:center;
+  background:#eab13d;color:#12392b;font-weight:900;font-size:20px;
+  box-shadow:0 12px 30px rgba(0,0,0,.18);
+}
+.pt-flow-link{
+  position:relative;height:3px;border-radius:99px;background:rgba(255,255,255,.10);overflow:hidden;
+}
+.pt-flow-link i{
+  position:absolute;inset:0 auto 0 0;width:0;
+  background:linear-gradient(90deg,#eab13d,#5fe2a6);
+  box-shadow:0 0 14px rgba(95,226,166,.5);
+  animation:ptLinkCycle 12s infinite;
+}
+.pt-step-1{animation-delay:0s}.pt-step-2{animation-delay:2s}.pt-step-3{animation-delay:4s}
+.pt-step-4{animation-delay:6s}.pt-step-5{animation-delay:8s}.pt-step-6{animation-delay:10s}
+.pt-link-1 i{animation-delay:1s}.pt-link-2 i{animation-delay:3s}.pt-link-3 i{animation-delay:5s}
+.pt-link-4 i{animation-delay:7s}.pt-link-5 i{animation-delay:9s}
+.pt-flow-result{
+  display:flex;align-items:center;justify-content:center;gap:13px;flex-wrap:wrap;
+  margin-top:28px;padding:16px;border-radius:16px;
+  background:rgba(0,0,0,.16);color:#d7e7df;font-size:13px;font-weight:800
+}
+.pt-flow-result strong{color:#eab13d;font-size:20px}
+@keyframes ptLivePulse{50%{box-shadow:0 0 0 8px rgba(51,214,139,0)}}
+@keyframes ptStepCycle{
+  0%,13%{opacity:.45;transform:translateY(8px) scale(.97);border-color:rgba(255,255,255,.12)}
+  17%,31%{opacity:1;transform:none;border-color:rgba(234,177,61,.62);box-shadow:0 18px 45px rgba(0,0,0,.22)}
+  36%,100%{opacity:.45;transform:translateY(8px) scale(.97);border-color:rgba(255,255,255,.12)}
+}
+@keyframes ptLinkCycle{
+  0%,7%{width:0}
+  12%,27%{width:100%}
+  32%,100%{width:0}
+}
+@media(max-width:1050px){
+  .pt-flow-track{grid-template-columns:1fr 34px 1fr;gap:12px}
+  .pt-flow-step{min-height:150px}
+  .pt-flow-link{height:3px}
+  .pt-step-1{grid-column:1}.pt-link-1{grid-column:2}.pt-step-2{grid-column:3}
+  .pt-link-2{display:none}
+  .pt-step-3{grid-column:1}.pt-link-3{grid-column:2}.pt-step-4{grid-column:3}
+  .pt-link-4{display:none}
+  .pt-step-5{grid-column:1}.pt-link-5{grid-column:2}.pt-step-6{grid-column:3}
+}
+@media(max-width:640px){
+  .pt-flow{padding:58px 0}
+  .pt-flow-head .v11-title{font-size:39px;line-height:1.02}
+  .pt-flow-head .v11-subtitle{font-size:14px;line-height:1.6;margin-top:15px}
+  .pt-flow-shell{margin-top:26px;padding:16px;border-radius:20px}
+  .pt-flow-track{display:flex;flex-direction:column;gap:9px;margin-top:18px}
+  .pt-flow-step{
+    width:100%;min-height:0;display:grid;grid-template-columns:44px 1fr;
+    grid-template-rows:auto auto;text-align:left;align-items:center;
+    padding:13px 14px;border-radius:15px;opacity:.52;transform:none
+  }
+  .pt-flow-icon{grid-row:1/3;width:40px;height:40px;border-radius:12px;font-size:16px}
+  .pt-flow-step b{margin:0;font-size:15px;padding-left:10px}
+  .pt-flow-step small{margin:2px 0 0;padding-left:10px;font-size:10px}
+  .pt-flow-link{
+    width:3px;height:16px;align-self:center;
+  }
+  .pt-flow-link i{width:100%;height:0;animation-name:ptLinkCycleMobile}
+  .pt-flow-result{margin-top:18px;gap:7px;padding:12px;font-size:10px}
+  .pt-flow-result strong{font-size:15px}
+}
+@keyframes ptLinkCycleMobile{
+  0%,7%{height:0}
+  12%,27%{height:100%}
+  32%,100%{height:0}
+}
+@media(prefers-reduced-motion:reduce){
+  .pt-flow-step{opacity:1;transform:none;animation:none}
+  .pt-flow-link i{width:100%;height:100%;animation:none}
+}
+</style>
+
+
+<style id="pt-build-19-workflow-heading">
+@media (max-width:640px){
+  #workflow .v11-title,
+  .complete-customer-workflow .v11-title{
+    font-size:44px !important;
+    line-height:.98 !important;
+    letter-spacing:-.035em !important;
+    margin-bottom:14px !important;
+  }
+  #workflow .v11-eyebrow,
+  .complete-customer-workflow .v11-eyebrow{
+    font-size:10px !important;
+    letter-spacing:.16em !important;
+    opacity:.85;
+  }
+  #workflow .v11-subtitle,
+  .complete-customer-workflow .v11-subtitle{
+    font-size:14px !important;
+    line-height:1.55 !important;
+    max-width:31ch;
+  }
+}
+</style>
+
+
+<style id="pt-build-20-centered-workflow-heading">
+#workflow .pt-flow-head,
+.complete-customer-workflow .section-head{
+  text-align:center;
+  margin-left:auto;
+  margin-right:auto;
+}
+#workflow .v11-title,
+.complete-customer-workflow .v11-title{
+  margin-left:auto;
+  margin-right:auto;
+  text-align:center;
+  max-width:820px;
+}
+#workflow .v11-subtitle,
+.complete-customer-workflow .v11-subtitle{
+  margin-left:auto;
+  margin-right:auto;
+  text-align:center;
+  max-width:720px;
+}
+#workflow .pt-workflow-question,
+.complete-customer-workflow .pt-workflow-question{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:auto;
+  margin:0 auto 18px;
+  padding:10px 16px;
+  border-radius:999px;
+  background:linear-gradient(135deg,#0b6548,#0a4c37);
+  color:#fff !important;
+  border:1px solid rgba(255,255,255,.18);
+  box-shadow:0 12px 30px rgba(8,76,54,.18);
+  letter-spacing:.12em !important;
+  animation:ptQuestionFloat 3.8s ease-in-out infinite;
+}
+#workflow .pt-workflow-question::before,
+.complete-customer-workflow .pt-workflow-question::before{
+  content:"?";
+  width:24px;
+  height:24px;
+  display:grid;
+  place-items:center;
+  margin-right:9px;
+  border-radius:50%;
+  background:#efb43f;
+  color:#173426;
+  font-weight:900;
+  font-size:14px;
+  box-shadow:0 0 0 0 rgba(239,180,63,.35);
+  animation:ptQuestionPulse 2s ease-in-out infinite;
+}
+@keyframes ptQuestionFloat{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-4px)}
+}
+@keyframes ptQuestionPulse{
+  0%,100%{box-shadow:0 0 0 0 rgba(239,180,63,.35)}
+  50%{box-shadow:0 0 0 8px rgba(239,180,63,0)}
+}
+@media(max-width:640px){
+  #workflow .pt-flow-head,
+  .complete-customer-workflow .section-head{
+    text-align:center !important;
+  }
+  #workflow .pt-workflow-question,
+  .complete-customer-workflow .pt-workflow-question{
+    margin-bottom:16px;
+    padding:9px 13px;
+    font-size:9px !important;
+    letter-spacing:.11em !important;
+  }
+  #workflow .v11-title,
+  .complete-customer-workflow .v11-title{
+    font-size:42px !important;
+    line-height:.98 !important;
+    text-align:center !important;
+    max-width:8.5ch;
+  }
+  #workflow .v11-subtitle,
+  .complete-customer-workflow .v11-subtitle{
+    max-width:31ch;
+    text-align:center !important;
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  #workflow .pt-workflow-question,
+  #workflow .pt-workflow-question::before,
+  .complete-customer-workflow .pt-workflow-question,
+  .complete-customer-workflow .pt-workflow-question::before{
+    animation:none !important;
+  }
+}
+</style>
+
+
+<style id="pt-build-21-visual-mobile-workflow">
+/* Correct hierarchy and centering for the actual experience section */
+#experience .v13-feature-head{
+  text-align:center;
+  margin-left:auto;
+  margin-right:auto;
+}
+#experience .v13-feature-head .v11-title,
+#experience .v13-feature-head .v11-subtitle{
+  margin-left:auto;
+  margin-right:auto;
+  text-align:center;
+}
+#experience .pt-workflow-question{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+  margin:0 auto 18px;
+  padding:10px 16px;
+  border-radius:999px;
+  background:linear-gradient(135deg,#0b6548,#073d2d);
+  color:#fff !important;
+  box-shadow:0 14px 34px rgba(8,76,54,.2);
+  animation:ptQuestionFloat21 3.6s ease-in-out infinite;
+}
+#experience .pt-workflow-question::before{
+  content:"?";
+  width:25px;height:25px;border-radius:50%;
+  display:grid;place-items:center;
+  background:#efb43f;color:#173426;
+  font-weight:900;font-size:14px;
+  animation:ptQuestionPulse21 1.9s ease-in-out infinite;
+}
+.mobile-workflow-visual,
+.mobile-feature-summary{display:none}
+
+@keyframes ptQuestionFloat21{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-4px)}
+}
+@keyframes ptQuestionPulse21{
+  0%,100%{box-shadow:0 0 0 0 rgba(239,180,63,.4)}
+  50%{box-shadow:0 0 0 8px rgba(239,180,63,0)}
+}
+
+@media(max-width:640px){
+  #experience{
+    padding-top:54px !important;
+    padding-bottom:58px !important;
+    background:
+      radial-gradient(circle at 50% 4%,rgba(226,170,59,.12),transparent 27%),
+      #f8f4eb;
+  }
+  #experience .wrap{width:min(100% - 24px,1180px)}
+  #experience .v13-feature-head{
+    text-align:center !important;
+    padding:0 3px;
+  }
+  #experience .pt-workflow-question{
+    margin:0 auto 14px !important;
+    padding:9px 13px !important;
+    font-size:9px !important;
+    letter-spacing:.1em !important;
+  }
+  #experience .v13-feature-head .v11-title{
+    font-size:43px !important;
+    line-height:.96 !important;
+    letter-spacing:-.04em !important;
+    max-width:8ch;
+    margin:0 auto 14px !important;
+    text-align:center !important;
+  }
+  #experience .v13-feature-head .v11-subtitle{
+    font-size:13px !important;
+    line-height:1.55 !important;
+    max-width:30ch;
+    margin:0 auto !important;
+    text-align:center !important;
+  }
+
+  /* Mobile-only visual explanation */
+  .mobile-workflow-visual{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:5px;
+    margin:22px auto 24px;
+    padding:14px 10px;
+    border-radius:18px;
+    background:linear-gradient(145deg,#073d2d,#0b5b41);
+    box-shadow:0 18px 44px rgba(7,61,45,.2);
+    overflow:hidden;
+  }
+  .mobile-workflow-node{
+    min-width:52px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:5px;
+    color:#fff;
+    opacity:.48;
+    animation:mobileNodeCycle21 8s infinite;
+  }
+  .mobile-workflow-node span{
+    width:34px;height:34px;border-radius:11px;
+    display:grid;place-items:center;
+    background:#efb43f;color:#173426;
+    font-size:15px;font-weight:900;
+  }
+  .mobile-workflow-node b{font-size:9px}
+  .mobile-workflow-visual i{
+    width:14px;height:2px;border-radius:99px;background:rgba(255,255,255,.2);
+    position:relative;overflow:hidden;
+  }
+  .mobile-workflow-visual i::after{
+    content:"";position:absolute;inset:0 auto 0 0;width:0;
+    background:#64dfa9;animation:mobileLineCycle21 8s infinite;
+  }
+  .mobile-workflow-node:nth-of-type(1){animation-delay:0s}
+  .mobile-workflow-node:nth-of-type(2){animation-delay:2s}
+  .mobile-workflow-node:nth-of-type(3){animation-delay:4s}
+  .mobile-workflow-node:nth-of-type(4){animation-delay:6s}
+  .mobile-workflow-visual i:nth-of-type(1)::after{animation-delay:1s}
+  .mobile-workflow-visual i:nth-of-type(2)::after{animation-delay:3s}
+  .mobile-workflow-visual i:nth-of-type(3)::after{animation-delay:5s}
+
+  /* Turn long feature list into a compact swipe gallery */
+  #experience .v13-feature-grid{
+    display:flex !important;
+    overflow-x:auto;
+    gap:12px !important;
+    margin-top:0 !important;
+    padding:2px 2px 10px;
+    scroll-snap-type:x mandatory;
+    scrollbar-width:none;
+  }
+  #experience .v13-feature-grid::-webkit-scrollbar{display:none}
+  #experience .v13-feature-grid article{
+    flex:0 0 84%;
+    min-height:205px;
+    scroll-snap-align:center;
+    padding:20px !important;
+    border-radius:20px !important;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    box-shadow:0 16px 40px rgba(16,35,28,.09);
+  }
+  #experience .v13-feature-grid article>span{
+    width:46px !important;height:46px !important;
+    border-radius:14px !important;
+    font-size:20px !important;
+    margin-bottom:16px !important;
+  }
+  #experience .v13-feature-grid article h3{
+    font-size:25px !important;
+    line-height:1.05 !important;
+    margin:0 0 10px !important;
+  }
+  #experience .v13-feature-grid article ul{display:none !important}
+  .mobile-feature-summary{
+    display:block;
+    color:#66766f;
+    font-size:13px;
+    line-height:1.55;
+    margin:0;
+  }
+  #experience .v13-feature-grid article::after{
+    content:"Swipe for more →";
+    margin-top:auto;
+    padding-top:18px;
+    color:#0b6548;
+    font-size:10px;
+    font-weight:900;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+  }
+}
+@keyframes mobileNodeCycle21{
+  0%,15%,100%{opacity:.48;transform:translateY(0)}
+  20%,40%{opacity:1;transform:translateY(-3px)}
+}
+@keyframes mobileLineCycle21{
+  0%,12%{width:0}
+  18%,38%{width:100%}
+  44%,100%{width:0}
+}
+@media(prefers-reduced-motion:reduce){
+  #experience .pt-workflow-question,
+  #experience .pt-workflow-question::before,
+  .mobile-workflow-node,
+  .mobile-workflow-visual i::after{
+    animation:none !important;
+  }
+  .mobile-workflow-node{opacity:1}
+  .mobile-workflow-visual i::after{width:100%}
+}
+</style>
+
 </head>
 <body>
 <div aria-hidden="true" class="v10-loader" id="v10Loader">
@@ -3215,7 +3711,7 @@ body{padding-bottom:88px}
 <span>R</span><span>S</span><span>C</span><span>H</span>
 </div>
 <div>
-<strong>Built for growing customer-facing businesses</strong>
+<strong>Designed for growing customer-facing businesses</strong>
 <small>Retail, hospitality, clinics, salons, education and services</small>
 </div>
 </div>
@@ -3338,7 +3834,7 @@ body{padding-bottom:88px}
 </section>
 <section aria-label="Industries supported" class="enterprise-industry-bar reveal">
 <div class="wrap enterprise-industry-bar-inner">
-<span class="industry-heading">Built for</span>
+<span class="industry-heading">Made for</span>
 <b><i aria-hidden="true">♙</i><em>Retail</em></b>
 <b><i aria-hidden="true">♨</i><em>Restaurants</em></b>
 <b><i aria-hidden="true">✚</i><em>Clinics</em></b>
@@ -3351,19 +3847,14 @@ body{padding-bottom:88px}
 </section>
 <section class="enterprise-trust reveal">
 <div class="wrap">
-<div class="enterprise-trust-grid">
-<div><strong>One connected system</strong><span>The customer website and internal operations share the same live context.</span></div>
-<div><strong>Custom-built workflow</strong><span>Terminology, screens and steps are configured around the client’s business.</span></div>
-<div><strong>Protected administration</strong><span>Public customer access stays separate from authorised staff access.</span></div>
-<div><strong>Designed to expand</strong><span>Branches, users, workflows and integrations can grow with the business.</span></div>
-</div>
+<div class="enterprise-trust-grid"><div class="trust-point"><i>↔</i><span><strong>Connected</strong><small>Website and dashboard stay in sync.</small></span></div><div class="trust-point"><i>✦</i><span><strong>Tailored</strong><small>Screens and workflow match the business.</small></span></div><div class="trust-point"><i>✓</i><span><strong>Secure</strong><small>Customer access stays separate from staff access.</small></span></div><div class="trust-point"><i>↗</i><span><strong>Scalable</strong><small>Add branches, users and integrations as needed.</small></span></div></div>
 </div>
 </section>
 <section class="v11-section soft reveal" id="platform">
 <div class="wrap">
-<div class="v11-eyebrow">One connected platform</div>
-<h2 class="v11-title">Built for the complete customer-facing operation.</h2>
-<p class="v11-subtitle">PrimeTrove OS connects the public website to the protected operational workspace. Each part shares the same branch, order, reservation and customer context.</p>
+<div class="v11-eyebrow">One simple platform</div>
+<h2 class="v11-title">Everything needed for customer-facing operations.</h2>
+<p class="v11-subtitle">Website, staff dashboard, branches, orders, bookings and customer records work together in one place.</p>
 <div class="v11-platform-grid">
 <div class="v11-module-list">
 <div class="v11-module"><div class="v11-module-icon">◫</div><div><strong>Branded customer website</strong><small>Menus, products, bookings and branch selection.</small></div><div class="v11-module-status">CONNECTED</div></div>
@@ -3387,128 +3878,146 @@ body{padding-bottom:88px}
 <div class="wrap">
 <div class="enterprise-section-head">
 <div>
-<div class="v11-eyebrow">Built around the business</div>
-<h2 class="v11-title">One operating platform. Different business editions.</h2>
-<p class="v11-subtitle">The core platform connects a branded customer website with a protected operations workspace. Each edition uses the client’s own products, services, branches, staff roles and fulfilment process.</p>
+<div class="v11-eyebrow">Made for your business</div>
+<h2 class="v11-title">One platform, adapted to your business.</h2>
+<p class="v11-subtitle">Choose an edition, then customise the branding, services, branches and workflow.</p>
 </div>
 </div>
-<div class="enterprise-solution-grid visual-edition-slider" id="visualEditionSlider" aria-label="PrimeTrove OS business editions">
+<div aria-label="PrimeTrove OS business editions" class="enterprise-solution-grid visual-edition-slider" id="visualEditionSlider">
 <article class="visual-edition-card food-edition" tabindex="0">
-  <div class="solution-visual" aria-hidden="true">
-    <svg viewBox="0 0 640 410" role="img">
-      <defs>
-        <linearGradient id="foodBg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#2d150b"/><stop offset="1" stop-color="#b15b20"/></linearGradient>
-        <radialGradient id="plate" cx="50%" cy="45%"><stop stop-color="#fff4d7"/><stop offset=".78" stop-color="#e9d3aa"/><stop offset="1" stop-color="#b88b55"/></radialGradient>
-      </defs>
-      <rect width="640" height="410" rx="28" fill="url(#foodBg)"/>
-      <circle cx="500" cy="86" r="120" fill="#efb33e" opacity=".18"/>
-      <rect x="58" y="60" width="258" height="286" rx="18" fill="#fffaf1" opacity=".97"/>
-      <rect x="78" y="85" width="95" height="10" rx="5" fill="#0b5a40"/>
-      <rect x="78" y="109" width="178" height="7" rx="4" fill="#c9d4ce"/>
-      <circle cx="185" cy="218" r="86" fill="url(#plate)"/>
-      <circle cx="185" cy="218" r="55" fill="#9b3c1c"/>
-      <circle cx="185" cy="218" r="36" fill="#ecb54a"/>
-      <path d="M154 203c20-31 55-25 66 2-19 15-46 17-66-2Z" fill="#f7df92"/>
-      <rect x="78" y="321" width="110" height="13" rx="6" fill="#0b5a40"/>
-      <rect x="204" y="321" width="72" height="13" rx="6" fill="#e6ad39"/>
-      <g transform="translate(355 130)">
-        <rect width="205" height="145" rx="22" fill="#fff" opacity=".97"/>
-        <circle cx="43" cy="44" r="21" fill="#dff2e8"/><path d="M34 45h18M43 36v18" stroke="#0b6a4b" stroke-width="5" stroke-linecap="round"/>
-        <rect x="75" y="27" width="96" height="10" rx="5" fill="#183a2f"/>
-        <rect x="75" y="48" width="75" height="7" rx="4" fill="#aebdb6"/>
-        <rect x="23" y="91" width="160" height="34" rx="10" fill="#0b6a4b"/>
-        <text x="103" y="113" text-anchor="middle" fill="white" font-size="14" font-family="Arial" font-weight="700">ORDER RECEIVED</text>
-      </g>
-    </svg>
-  </div>
-  <div class="visual-edition-copy"><span>01</span><div><h3>Food &amp; hospitality</h3><p>Orders • reservations • tables</p></div></div>
+<div aria-hidden="true" class="solution-visual">
+<svg role="img" viewbox="0 0 640 410">
+<defs>
+<lineargradient id="foodBg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#2d150b"></stop><stop offset="1" stop-color="#b15b20"></stop></lineargradient>
+<radialgradient cx="50%" cy="45%" id="plate"><stop stop-color="#fff4d7"></stop><stop offset=".78" stop-color="#e9d3aa"></stop><stop offset="1" stop-color="#b88b55"></stop></radialgradient>
+</defs>
+<rect fill="url(#foodBg)" height="410" rx="28" width="640"></rect>
+<circle cx="500" cy="86" fill="#efb33e" opacity=".18" r="120"></circle>
+<rect fill="#fffaf1" height="286" opacity=".97" rx="18" width="258" x="58" y="60"></rect>
+<rect fill="#0b5a40" height="10" rx="5" width="95" x="78" y="85"></rect>
+<rect fill="#c9d4ce" height="7" rx="4" width="178" x="78" y="109"></rect>
+<circle cx="185" cy="218" fill="url(#plate)" r="86"></circle>
+<circle cx="185" cy="218" fill="#9b3c1c" r="55"></circle>
+<circle cx="185" cy="218" fill="#ecb54a" r="36"></circle>
+<path d="M154 203c20-31 55-25 66 2-19 15-46 17-66-2Z" fill="#f7df92"></path>
+<rect fill="#0b5a40" height="13" rx="6" width="110" x="78" y="321"></rect>
+<rect fill="#e6ad39" height="13" rx="6" width="72" x="204" y="321"></rect>
+<g transform="translate(355 130)">
+<rect fill="#fff" height="145" opacity=".97" rx="22" width="205"></rect>
+<circle cx="43" cy="44" fill="#dff2e8" r="21"></circle><path d="M34 45h18M43 36v18" stroke="#0b6a4b" stroke-linecap="round" stroke-width="5"></path>
+<rect fill="#183a2f" height="10" rx="5" width="96" x="75" y="27"></rect>
+<rect fill="#aebdb6" height="7" rx="4" width="75" x="75" y="48"></rect>
+<rect fill="#0b6a4b" height="34" rx="10" width="160" x="23" y="91"></rect>
+<text fill="white" font-family="Arial" font-size="14" font-weight="700" text-anchor="middle" x="103" y="113">ORDER RECEIVED</text>
+</g>
+</svg>
+<div class="visual-benefit-pill">Orders · Reservations · Tables</div></div>
+<div class="visual-edition-copy"><span>01</span><div><h3>Food &amp; hospitality</h3><p>Orders • reservations • tables</p></div></div>
 </article>
 <article class="visual-edition-card retail-edition" tabindex="0">
-  <div class="solution-visual" aria-hidden="true">
-    <svg viewBox="0 0 640 410" role="img">
-      <defs><linearGradient id="retailBg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f5e9d5"/><stop offset="1" stop-color="#d8b891"/></linearGradient></defs>
-      <rect width="640" height="410" rx="28" fill="url(#retailBg)"/>
-      <rect x="45" y="54" width="550" height="302" rx="25" fill="#fff" opacity=".93"/>
-      <rect x="67" y="76" width="506" height="45" rx="12" fill="#0b513b"/>
-      <circle cx="92" cy="98" r="8" fill="#efb33e"/><rect x="116" y="91" width="110" height="13" rx="6" fill="#fff" opacity=".9"/>
-      <g transform="translate(76 145)">
-        <rect width="142" height="171" rx="16" fill="#f3f5f4"/>
-        <path d="M48 43 71 27l23 16 20 8-15 34-14-9v56H57V76l-14 9-15-34Z" fill="#1d6f53"/>
-        <rect x="25" y="145" width="92" height="11" rx="5" fill="#bac8c1"/>
-      </g>
-      <g transform="translate(249 145)">
-        <rect width="142" height="171" rx="16" fill="#f7f0e7"/>
-        <path d="M52 39c5-20 33-20 38 0l13 90H39Z" fill="#d79b2e"/><path d="M57 43c0-20 28-20 28 0" fill="none" stroke="#6b4517" stroke-width="7"/>
-        <rect x="25" y="145" width="92" height="11" rx="5" fill="#cbbda8"/>
-      </g>
-      <g transform="translate(422 145)">
-        <rect width="142" height="171" rx="16" fill="#eef4f1"/>
-        <path d="M35 45h72l-8 83H43Z" fill="#8e4b38"/><path d="M51 45c0-28 40-28 40 0" fill="none" stroke="#593124" stroke-width="7"/>
-        <rect x="25" y="145" width="92" height="11" rx="5" fill="#bac8c1"/>
-      </g>
-    </svg>
-  </div>
-  <div class="visual-edition-copy"><span>02</span><div><h3>Retail &amp; fashion</h3><p>Products • branches • customers</p></div></div>
+<div aria-hidden="true" class="solution-visual">
+<svg role="img" viewbox="0 0 640 410">
+<defs><lineargradient id="retailBg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#f5e9d5"></stop><stop offset="1" stop-color="#d8b891"></stop></lineargradient></defs>
+<rect fill="url(#retailBg)" height="410" rx="28" width="640"></rect>
+<rect fill="#fff" height="302" opacity=".93" rx="25" width="550" x="45" y="54"></rect>
+<rect fill="#0b513b" height="45" rx="12" width="506" x="67" y="76"></rect>
+<circle cx="92" cy="98" fill="#efb33e" r="8"></circle><rect fill="#fff" height="13" opacity=".9" rx="6" width="110" x="116" y="91"></rect>
+<g transform="translate(76 145)">
+<rect fill="#f3f5f4" height="171" rx="16" width="142"></rect>
+<path d="M48 43 71 27l23 16 20 8-15 34-14-9v56H57V76l-14 9-15-34Z" fill="#1d6f53"></path>
+<rect fill="#bac8c1" height="11" rx="5" width="92" x="25" y="145"></rect>
+</g>
+<g transform="translate(249 145)">
+<rect fill="#f7f0e7" height="171" rx="16" width="142"></rect>
+<path d="M52 39c5-20 33-20 38 0l13 90H39Z" fill="#d79b2e"></path><path d="M57 43c0-20 28-20 28 0" fill="none" stroke="#6b4517" stroke-width="7"></path>
+<rect fill="#cbbda8" height="11" rx="5" width="92" x="25" y="145"></rect>
+</g>
+<g transform="translate(422 145)">
+<rect fill="#eef4f1" height="171" rx="16" width="142"></rect>
+<path d="M35 45h72l-8 83H43Z" fill="#8e4b38"></path><path d="M51 45c0-28 40-28 40 0" fill="none" stroke="#593124" stroke-width="7"></path>
+<rect fill="#bac8c1" height="11" rx="5" width="92" x="25" y="145"></rect>
+</g>
+</svg>
+<div class="visual-benefit-pill">Products · Branches · Customers</div></div>
+<div class="visual-edition-copy"><span>02</span><div><h3>Retail &amp; fashion</h3><p>Products • branches • customers</p></div></div>
 </article>
 <article class="visual-edition-card salon-edition" tabindex="0">
-  <div class="solution-visual" aria-hidden="true">
-    <svg viewBox="0 0 640 410" role="img">
-      <defs><linearGradient id="salonBg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#dfeee8"/><stop offset="1" stop-color="#8db9a6"/></linearGradient></defs>
-      <rect width="640" height="410" rx="28" fill="url(#salonBg)"/>
-      <circle cx="118" cy="82" r="108" fill="#fff" opacity=".28"/>
-      <rect x="54" y="58" width="340" height="294" rx="25" fill="#fff" opacity=".95"/>
-      <text x="82" y="100" fill="#103a2d" font-size="22" font-family="Georgia" font-weight="700">Today’s appointments</text>
-      <g transform="translate(82 126)"><rect width="284" height="57" rx="14" fill="#edf6f1"/><circle cx="30" cy="28" r="15" fill="#0b6a4b"/><rect x="58" y="15" width="105" height="9" rx="4" fill="#27473b"/><rect x="58" y="34" width="72" height="7" rx="3" fill="#9eafa7"/><rect x="217" y="14" width="48" height="28" rx="14" fill="#dff2e8"/></g>
-      <g transform="translate(82 198)"><rect width="284" height="57" rx="14" fill="#fff4de"/><circle cx="30" cy="28" r="15" fill="#dfab3c"/><rect x="58" y="15" width="112" height="9" rx="4" fill="#27473b"/><rect x="58" y="34" width="84" height="7" rx="3" fill="#9eafa7"/><rect x="217" y="14" width="48" height="28" rx="14" fill="#f7e8bb"/></g>
-      <g transform="translate(82 270)"><rect width="284" height="57" rx="14" fill="#edf6f1"/><circle cx="30" cy="28" r="15" fill="#0b6a4b"/><rect x="58" y="15" width="96" height="9" rx="4" fill="#27473b"/><rect x="58" y="34" width="65" height="7" rx="3" fill="#9eafa7"/><rect x="217" y="14" width="48" height="28" rx="14" fill="#dff2e8"/></g>
-      <g transform="translate(433 90)"><circle cx="70" cy="70" r="70" fill="#0b513b"/><path d="M43 38c28 20 28 46 0 66M97 38c-28 20-28 46 0 66" fill="none" stroke="#efb33e" stroke-width="10" stroke-linecap="round"/><circle cx="70" cy="70" r="9" fill="#fff"/></g>
-      <rect x="425" y="260" width="155" height="63" rx="18" fill="#fff" opacity=".95"/><text x="503" y="286" text-anchor="middle" fill="#0b513b" font-size="12" font-family="Arial" font-weight="700">NEXT AVAILABLE</text><text x="503" y="308" text-anchor="middle" fill="#183a2f" font-size="19" font-family="Georgia" font-weight="700">2:30 PM</text>
-    </svg>
-  </div>
-  <div class="visual-edition-copy"><span>03</span><div><h3>Salons &amp; services</h3><p>Appointments • staff • reminders</p></div></div>
+<div aria-hidden="true" class="solution-visual">
+<svg role="img" viewbox="0 0 640 410">
+<defs><lineargradient id="salonBg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#dfeee8"></stop><stop offset="1" stop-color="#8db9a6"></stop></lineargradient></defs>
+<rect fill="url(#salonBg)" height="410" rx="28" width="640"></rect>
+<circle cx="118" cy="82" fill="#fff" opacity=".28" r="108"></circle>
+<rect fill="#fff" height="294" opacity=".95" rx="25" width="340" x="54" y="58"></rect>
+<text fill="#103a2d" font-family="Georgia" font-size="22" font-weight="700" x="82" y="100">Today’s appointments</text>
+<g transform="translate(82 126)"><rect fill="#edf6f1" height="57" rx="14" width="284"></rect><circle cx="30" cy="28" fill="#0b6a4b" r="15"></circle><rect fill="#27473b" height="9" rx="4" width="105" x="58" y="15"></rect><rect fill="#9eafa7" height="7" rx="3" width="72" x="58" y="34"></rect><rect fill="#dff2e8" height="28" rx="14" width="48" x="217" y="14"></rect></g>
+<g transform="translate(82 198)"><rect fill="#fff4de" height="57" rx="14" width="284"></rect><circle cx="30" cy="28" fill="#dfab3c" r="15"></circle><rect fill="#27473b" height="9" rx="4" width="112" x="58" y="15"></rect><rect fill="#9eafa7" height="7" rx="3" width="84" x="58" y="34"></rect><rect fill="#f7e8bb" height="28" rx="14" width="48" x="217" y="14"></rect></g>
+<g transform="translate(82 270)"><rect fill="#edf6f1" height="57" rx="14" width="284"></rect><circle cx="30" cy="28" fill="#0b6a4b" r="15"></circle><rect fill="#27473b" height="9" rx="4" width="96" x="58" y="15"></rect><rect fill="#9eafa7" height="7" rx="3" width="65" x="58" y="34"></rect><rect fill="#dff2e8" height="28" rx="14" width="48" x="217" y="14"></rect></g>
+<g transform="translate(433 90)"><circle cx="70" cy="70" fill="#0b513b" r="70"></circle><path d="M43 38c28 20 28 46 0 66M97 38c-28 20-28 46 0 66" fill="none" stroke="#efb33e" stroke-linecap="round" stroke-width="10"></path><circle cx="70" cy="70" fill="#fff" r="9"></circle></g>
+<rect fill="#fff" height="63" opacity=".95" rx="18" width="155" x="425" y="260"></rect><text fill="#0b513b" font-family="Arial" font-size="12" font-weight="700" text-anchor="middle" x="503" y="286">NEXT AVAILABLE</text><text fill="#183a2f" font-family="Georgia" font-size="19" font-weight="700" text-anchor="middle" x="503" y="308">2:30 PM</text>
+</svg>
+<div class="visual-benefit-pill">Appointments · Staff · Reminders</div></div>
+<div class="visual-edition-copy"><span>03</span><div><h3>Salons &amp; services</h3><p>Appointments • staff • reminders</p></div></div>
 </article>
 <article class="visual-edition-card custom-edition" tabindex="0">
-  <div class="solution-visual" aria-hidden="true">
-    <svg viewBox="0 0 640 410" role="img">
-      <defs><linearGradient id="customBg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#082f24"/><stop offset="1" stop-color="#0d704f"/></linearGradient></defs>
-      <rect width="640" height="410" rx="28" fill="url(#customBg)"/>
-      <g opacity=".18" stroke="#fff"><path d="M0 82h640M0 164h640M0 246h640M0 328h640M106 0v410M212 0v410M318 0v410M424 0v410M530 0v410"/></g>
-      <rect x="58" y="70" width="210" height="270" rx="22" fill="#fff" opacity=".97"/>
-      <rect x="82" y="96" width="74" height="11" rx="5" fill="#0b5a40"/>
-      <rect x="82" y="128" width="160" height="44" rx="11" fill="#edf5f1"/><rect x="96" y="142" width="82" height="8" rx="4" fill="#24483a"/><circle cx="220" cy="150" r="10" fill="#27aa73"/>
-      <rect x="82" y="186" width="160" height="44" rx="11" fill="#fff2d4"/><rect x="96" y="200" width="97" height="8" rx="4" fill="#24483a"/><circle cx="220" cy="208" r="10" fill="#e0aa39"/>
-      <rect x="82" y="244" width="160" height="44" rx="11" fill="#edf5f1"/><rect x="96" y="258" width="68" height="8" rx="4" fill="#24483a"/><circle cx="220" cy="266" r="10" fill="#27aa73"/>
-      <rect x="82" y="302" width="104" height="17" rx="8" fill="#0b5a40"/>
-      <g transform="translate(313 84)">
-        <circle cx="118" cy="118" r="105" fill="none" stroke="#e8b140" stroke-width="2" opacity=".55"/>
-        <circle cx="118" cy="118" r="65" fill="#efb33e"/><circle cx="118" cy="118" r="28" fill="#0b513b"/>
-        <g fill="#fff"><rect x="100" y="-1" width="36" height="58" rx="12"/><rect x="100" y="179" width="36" height="58" rx="12"/><rect x="-1" y="100" width="58" height="36" rx="12"/><rect x="179" y="100" width="58" height="36" rx="12"/></g>
-      </g>
-      <rect x="345" y="320" width="226" height="42" rx="13" fill="#fff" opacity=".95"/><text x="458" y="346" text-anchor="middle" fill="#0b513b" font-size="14" font-family="Arial" font-weight="700">CUSTOM WORKFLOW • LIVE</text>
-    </svg>
-  </div>
-  <div class="visual-edition-copy"><span>04</span><div><h3>Custom operations</h3><p>Forms • live work • history</p></div></div>
+<div aria-hidden="true" class="solution-visual">
+<svg role="img" viewbox="0 0 640 410">
+<defs><lineargradient id="customBg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#082f24"></stop><stop offset="1" stop-color="#0d704f"></stop></lineargradient></defs>
+<rect fill="url(#customBg)" height="410" rx="28" width="640"></rect>
+<g opacity=".18" stroke="#fff"><path d="M0 82h640M0 164h640M0 246h640M0 328h640M106 0v410M212 0v410M318 0v410M424 0v410M530 0v410"></path></g>
+<rect fill="#fff" height="270" opacity=".97" rx="22" width="210" x="58" y="70"></rect>
+<rect fill="#0b5a40" height="11" rx="5" width="74" x="82" y="96"></rect>
+<rect fill="#edf5f1" height="44" rx="11" width="160" x="82" y="128"></rect><rect fill="#24483a" height="8" rx="4" width="82" x="96" y="142"></rect><circle cx="220" cy="150" fill="#27aa73" r="10"></circle>
+<rect fill="#fff2d4" height="44" rx="11" width="160" x="82" y="186"></rect><rect fill="#24483a" height="8" rx="4" width="97" x="96" y="200"></rect><circle cx="220" cy="208" fill="#e0aa39" r="10"></circle>
+<rect fill="#edf5f1" height="44" rx="11" width="160" x="82" y="244"></rect><rect fill="#24483a" height="8" rx="4" width="68" x="96" y="258"></rect><circle cx="220" cy="266" fill="#27aa73" r="10"></circle>
+<rect fill="#0b5a40" height="17" rx="8" width="104" x="82" y="302"></rect>
+<g transform="translate(313 84)">
+<circle cx="118" cy="118" fill="none" opacity=".55" r="105" stroke="#e8b140" stroke-width="2"></circle>
+<circle cx="118" cy="118" fill="#efb33e" r="65"></circle><circle cx="118" cy="118" fill="#0b513b" r="28"></circle>
+<g fill="#fff"><rect height="58" rx="12" width="36" x="100" y="-1"></rect><rect height="58" rx="12" width="36" x="100" y="179"></rect><rect height="36" rx="12" width="58" x="-1" y="100"></rect><rect height="36" rx="12" width="58" x="179" y="100"></rect></g>
+</g>
+<rect fill="#fff" height="42" opacity=".95" rx="13" width="226" x="345" y="320"></rect><text fill="#0b513b" font-family="Arial" font-size="14" font-weight="700" text-anchor="middle" x="458" y="346">CUSTOM WORKFLOW • LIVE</text>
+</svg>
+<div class="visual-benefit-pill">Forms · Live work · History</div></div>
+<div class="visual-edition-copy"><span>04</span><div><h3>Custom operations</h3><p>Forms • live work • history</p></div></div>
 </article>
 </div>
-<div class="visual-edition-dots" id="visualEditionDots" aria-label="Business edition slider controls">
-  <button class="active" aria-label="Show food and hospitality"></button><button aria-label="Show retail and fashion"></button><button aria-label="Show salons and services"></button><button aria-label="Show custom operations"></button>
+<div aria-label="Business edition slider controls" class="visual-edition-dots" id="visualEditionDots">
+<button aria-label="Show food and hospitality" class="active"></button><button aria-label="Show retail and fashion"></button><button aria-label="Show salons and services"></button><button aria-label="Show custom operations"></button>
 </div>
 </div>
 </section>
 <section class="v13-feature-detail reveal" id="experience">
 <div class="wrap">
 <div class="v13-feature-head">
-<div class="v11-eyebrow">Complete operating structure</div>
-<h2 class="v11-title">Built for the complete customer journey.</h2>
-<p class="v11-subtitle">Customers interact through a polished website. Staff manage orders, bookings, customer records, branches and website content from a protected administrative dashboard.</p>
+<div class="v11-eyebrow pt-workflow-question">How does PrimeTrove OS work?</div>
+<h2 class="v11-title">Complete Customer Workflow</h2>
+<p class="v11-subtitle">From the first customer action to the final update, every step stays connected in one secure system.</p>
+<div class="mobile-workflow-visual" aria-label="PrimeTrove OS workflow preview">
+  <div class="mobile-workflow-node">
+    <span>👤</span><b>Customer</b>
+  </div>
+  <i></i>
+  <div class="mobile-workflow-node">
+    <span>▣</span><b>Website</b>
+  </div>
+  <i></i>
+  <div class="mobile-workflow-node">
+    <span>⚡</span><b>Staff</b>
+  </div>
+  <i></i>
+  <div class="mobile-workflow-node">
+    <span>✓</span><b>Updated</b>
+  </div>
+</div>
+
 </div>
 <div class="v13-feature-grid">
-<article><span>⌂</span><h3>Branded customer website</h3><ul><li>Responsive desktop and mobile design</li><li>Branch selection and branch-specific menus</li><li>Search, categories, cart and checkout</li><li>Hero sliders and website controls</li></ul></article>
-<article><span>▤</span><h3>Order workflow</h3><ul><li>Pickup and delivery orders</li><li>Received, confirmed, preparing, ready and completed stages</li><li>Live staff-attention indicators</li><li>Tracking links and WhatsApp updates</li></ul></article>
-<article><span>▦</span><h3>Reservations and tables</h3><ul><li>Online, phone and walk-in bookings</li><li>Branch-specific table maps</li><li>Available, reserved and occupied status</li><li>Live guest and table counts</li></ul></article>
-<article><span>♡</span><h3>Customer records</h3><ul><li>Separate customer profiles and history</li><li>Orders and reservations by customer</li><li>Preferences and private staff notes</li><li>Regular guest identification</li></ul></article>
-<article><span>⌘</span><h3>Multi-branch control</h3><ul><li>Branch-specific menus and contacts</li><li>Orders and reservations grouped by branch</li><li>Branch drill-down from dashboard statistics</li><li>Separate table configuration per location</li></ul></article>
-<article><span>⚙</span><h3>Administrative control</h3><ul><li>Menu and website management</li><li>Protected admin access and staff accounts</li><li>Admin-only data deletion controls</li><li>Persistent records until manually removed</li></ul></article>
+<article><span>⌂</span><h3>Branded customer website</h3><p class="mobile-feature-summary">Menus, branches, ordering and checkout in one branded experience.</p><ul><li>Responsive desktop and mobile design</li><li>Branch selection and branch-specific menus</li><li>Search, categories, cart and checkout</li><li>Hero sliders and website controls</li></ul></article>
+<article><span>▤</span><h3>Order workflow</h3><p class="mobile-feature-summary">Orders move clearly from received to completed with live status.</p><ul><li>Pickup and delivery orders</li><li>Received, confirmed, preparing, ready and completed stages</li><li>Live staff-attention indicators</li><li>Tracking links and WhatsApp updates</li></ul></article>
+<article><span>▦</span><h3>Reservations and tables</h3><p class="mobile-feature-summary">Bookings, table availability and guest status stay connected.</p><ul><li>Online, phone and walk-in bookings</li><li>Branch-specific table maps</li><li>Available, reserved and occupied status</li><li>Live guest and table counts</li></ul></article>
+<article><span>♡</span><h3>Customer records</h3><p class="mobile-feature-summary">Every order, booking and preference stays linked to the customer.</p><ul><li>Separate customer profiles and history</li><li>Orders and reservations by customer</li><li>Preferences and private staff notes</li><li>Regular guest identification</li></ul></article>
+<article><span>⌘</span><h3>Multi-branch control</h3><p class="mobile-feature-summary">Each location keeps its own menu, activity and settings.</p><ul><li>Branch-specific menus and contacts</li><li>Orders and reservations grouped by branch</li><li>Branch drill-down from dashboard statistics</li><li>Separate table configuration per location</li></ul></article>
+<article><span>⚙</span><h3>Administrative control</h3><p class="mobile-feature-summary">Protected access for staff, settings and business data.</p><ul><li>Menu and website management</li><li>Protected admin access and staff accounts</li><li>Admin-only data deletion controls</li><li>Persistent records until manually removed</li></ul></article>
 </div>
 </div>
 </section>
@@ -3707,18 +4216,75 @@ body{padding-bottom:88px}
 </div>
 </div>
 </section>
-<section class="enterprise-delivery reveal">
-<div class="wrap">
-<div class="enterprise-section-head">
-<div><div class="v11-eyebrow">A controlled implementation</div><h2 class="v11-title">From business requirements to a working operating platform.</h2><p class="v11-subtitle">The project is shaped around the client’s real workflow rather than forcing the business into a generic template.</p></div>
-</div>
-<div class="delivery-grid">
-<article><b>01</b><h3>Discovery</h3><p>Confirm services, branches, users, customer journeys and operational pain points.</p></article>
-<article><b>02</b><h3>Platform design</h3><p>Define the website, dashboard, workflow stages, permissions and communication points.</p></article>
-<article><b>03</b><h3>Build and testing</h3><p>Configure the working edition, test customer actions and validate staff processes.</p></article>
-<article><b>04</b><h3>Launch and refinement</h3><p>Publish the platform, train the team and improve the workflow using real feedback.</p></article>
-</div>
-</div>
+
+<section class="pt-flow reveal" id="workflow">
+  <div class="wrap">
+    <div class="pt-flow-head">
+      <div class="v11-eyebrow">See how it works</div>
+      <h2 class="v11-title">One customer action. One connected journey.</h2>
+      <p class="v11-subtitle">PrimeTrove OS moves each request from the customer website to the right staff member, keeps the customer updated and stores the complete history.</p>
+    </div>
+
+    <div class="pt-flow-shell" aria-label="Animated PrimeTrove OS customer workflow">
+      <div class="pt-flow-live"><i></i> Live workflow</div>
+
+      <div class="pt-flow-track">
+        <article class="pt-flow-step pt-step-1">
+          <span class="pt-flow-icon">👤</span>
+          <b>Customer</b>
+          <small>Places an order or request</small>
+        </article>
+
+        <span class="pt-flow-link pt-link-1"><i></i></span>
+
+        <article class="pt-flow-step pt-step-2">
+          <span class="pt-flow-icon">▣</span>
+          <b>Website</b>
+          <small>Captures the details</small>
+        </article>
+
+        <span class="pt-flow-link pt-link-2"><i></i></span>
+
+        <article class="pt-flow-step pt-step-3">
+          <span class="pt-flow-icon">●</span>
+          <b>Live alert</b>
+          <small>Routes it to the right team</small>
+        </article>
+
+        <span class="pt-flow-link pt-link-3"><i></i></span>
+
+        <article class="pt-flow-step pt-step-4">
+          <span class="pt-flow-icon">✓</span>
+          <b>Staff action</b>
+          <small>Confirms and completes the work</small>
+        </article>
+
+        <span class="pt-flow-link pt-link-4"><i></i></span>
+
+        <article class="pt-flow-step pt-step-5">
+          <span class="pt-flow-icon">W</span>
+          <b>Customer update</b>
+          <small>WhatsApp status is sent</small>
+        </article>
+
+        <span class="pt-flow-link pt-link-5"><i></i></span>
+
+        <article class="pt-flow-step pt-step-6">
+          <span class="pt-flow-icon">★</span>
+          <b>History saved</b>
+          <small>Ready for future service</small>
+        </article>
+      </div>
+
+      <div class="pt-flow-result">
+        <span>Customer request</span>
+        <strong>→</strong>
+        <span>Organised staff action</span>
+        <strong>→</strong>
+        <span>Customer kept informed</span>
+      </div>
+    </div>
+  </div>
 </section>
 <section class="v12-pricing reveal" id="packages">
 <div class="wrap">
@@ -4570,5 +5136,12 @@ body{padding-bottom:88px}
   dots.forEach((d,i)=>d.addEventListener('click',()=>cards[i].scrollIntoView({behavior:'smooth',block:'nearest',inline:'start'})));
 })();
 </script>
-</body>
+<script>
+(function(){
+  const cards=[...document.querySelectorAll('.visual-edition-card')];
+  if(!('IntersectionObserver' in window)){cards.forEach(c=>c.classList.add('is-seen'));return;}
+  const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-seen');io.unobserve(e.target)}}),{threshold:.22});
+  cards.forEach(c=>io.observe(c));
+})();
+</script></body>
 </html>
