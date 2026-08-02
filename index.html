@@ -3125,6 +3125,35 @@ body{padding-bottom:88px}
 }
 </style>
 
+
+<style id="build16-visual-editions">
+/* Build 16: visual business-edition showcase */
+.visual-edition-card{padding:0!important;overflow:hidden!important;background:#fff!important;border-radius:24px!important;position:relative;isolation:isolate}
+.solution-visual{aspect-ratio:640/410;overflow:hidden;background:#eaf1ed}
+.solution-visual svg{display:block;width:100%;height:100%}
+.visual-edition-copy{display:flex;align-items:center;gap:14px;padding:20px 22px 22px}
+.visual-edition-copy>span{display:grid;place-items:center;flex:0 0 40px;width:40px;height:40px;border-radius:12px;background:#e5f2ec;color:#086046;font-size:11px;font-weight:900}
+.visual-edition-copy h3{margin:0 0 4px!important;font-size:24px!important;line-height:1.05!important}
+.visual-edition-copy p{margin:0!important;font-size:12px!important;color:#6b7b74!important;letter-spacing:.01em}
+.visual-edition-card:hover .solution-visual svg{transform:scale(1.025)}
+.solution-visual svg{transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.visual-edition-dots{display:none}
+@media(max-width:700px){
+  .enterprise-solutions .enterprise-section-head{margin-bottom:18px!important}
+  .enterprise-solutions .v11-subtitle{display:none}
+  .visual-edition-slider{display:flex!important;grid-template-columns:none!important;gap:12px!important;overflow-x:auto!important;scroll-snap-type:x mandatory;padding:2px 22px 8px 0!important;margin-right:-12px!important;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .visual-edition-slider::-webkit-scrollbar{display:none}
+  .visual-edition-card{flex:0 0 88%;scroll-snap-align:start;box-shadow:0 16px 42px rgba(8,44,32,.12)!important}
+  .solution-visual{aspect-ratio:1.42/1}
+  .visual-edition-copy{padding:16px 16px 17px;gap:11px}
+  .visual-edition-copy>span{width:35px;height:35px;flex-basis:35px;border-radius:10px}
+  .visual-edition-copy h3{font-size:21px!important}
+  .visual-edition-copy p{font-size:10.5px!important}
+  .visual-edition-dots{display:flex;justify-content:center;gap:7px;margin-top:13px}
+  .visual-edition-dots button{width:7px;height:7px;padding:0;border:0;border-radius:99px;background:#b7c9c1;transition:.25s ease}
+  .visual-edition-dots button.active{width:24px;background:#0b6a4b}
+}
+</style>
 </head>
 <body>
 <div aria-hidden="true" class="v10-loader" id="v10Loader">
@@ -3363,11 +3392,106 @@ body{padding-bottom:88px}
 <p class="v11-subtitle">The core platform connects a branded customer website with a protected operations workspace. Each edition uses the client’s own products, services, branches, staff roles and fulfilment process.</p>
 </div>
 </div>
-<div class="enterprise-solution-grid">
-<article><span class="solution-icon">01</span><h3>Food and hospitality</h3><p>Menus, online orders, reservations, tables, branches, customer history and live fulfilment stages.</p><div class="solution-tags"><span>Orders</span><span>Bookings</span><span>Tables</span></div></article>
-<article><span class="solution-icon">02</span><h3>Retail and fashion</h3><p>Product catalogues, collections, branch availability, enquiries, customer records and order workflows.</p><div class="solution-tags"><span>Products</span><span>Branches</span><span>Customers</span></div></article>
-<article><span class="solution-icon">03</span><h3>Salons and services</h3><p>Service catalogues, appointments, staff availability, customer notes, reminders and branch schedules.</p><div class="solution-tags"><span>Appointments</span><span>Staff</span><span>Reminders</span></div></article>
-<article><span class="solution-icon">04</span><h3>Custom operations</h3><p>Purpose-built workflows for businesses that need customer actions to move directly into an organised staff dashboard.</p><div class="solution-tags"><span>Custom forms</span><span>Live work</span><span>History</span></div></article>
+<div class="enterprise-solution-grid visual-edition-slider" id="visualEditionSlider" aria-label="PrimeTrove OS business editions">
+<article class="visual-edition-card food-edition" tabindex="0">
+  <div class="solution-visual" aria-hidden="true">
+    <svg viewBox="0 0 640 410" role="img">
+      <defs>
+        <linearGradient id="foodBg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#2d150b"/><stop offset="1" stop-color="#b15b20"/></linearGradient>
+        <radialGradient id="plate" cx="50%" cy="45%"><stop stop-color="#fff4d7"/><stop offset=".78" stop-color="#e9d3aa"/><stop offset="1" stop-color="#b88b55"/></radialGradient>
+      </defs>
+      <rect width="640" height="410" rx="28" fill="url(#foodBg)"/>
+      <circle cx="500" cy="86" r="120" fill="#efb33e" opacity=".18"/>
+      <rect x="58" y="60" width="258" height="286" rx="18" fill="#fffaf1" opacity=".97"/>
+      <rect x="78" y="85" width="95" height="10" rx="5" fill="#0b5a40"/>
+      <rect x="78" y="109" width="178" height="7" rx="4" fill="#c9d4ce"/>
+      <circle cx="185" cy="218" r="86" fill="url(#plate)"/>
+      <circle cx="185" cy="218" r="55" fill="#9b3c1c"/>
+      <circle cx="185" cy="218" r="36" fill="#ecb54a"/>
+      <path d="M154 203c20-31 55-25 66 2-19 15-46 17-66-2Z" fill="#f7df92"/>
+      <rect x="78" y="321" width="110" height="13" rx="6" fill="#0b5a40"/>
+      <rect x="204" y="321" width="72" height="13" rx="6" fill="#e6ad39"/>
+      <g transform="translate(355 130)">
+        <rect width="205" height="145" rx="22" fill="#fff" opacity=".97"/>
+        <circle cx="43" cy="44" r="21" fill="#dff2e8"/><path d="M34 45h18M43 36v18" stroke="#0b6a4b" stroke-width="5" stroke-linecap="round"/>
+        <rect x="75" y="27" width="96" height="10" rx="5" fill="#183a2f"/>
+        <rect x="75" y="48" width="75" height="7" rx="4" fill="#aebdb6"/>
+        <rect x="23" y="91" width="160" height="34" rx="10" fill="#0b6a4b"/>
+        <text x="103" y="113" text-anchor="middle" fill="white" font-size="14" font-family="Arial" font-weight="700">ORDER RECEIVED</text>
+      </g>
+    </svg>
+  </div>
+  <div class="visual-edition-copy"><span>01</span><div><h3>Food &amp; hospitality</h3><p>Orders • reservations • tables</p></div></div>
+</article>
+<article class="visual-edition-card retail-edition" tabindex="0">
+  <div class="solution-visual" aria-hidden="true">
+    <svg viewBox="0 0 640 410" role="img">
+      <defs><linearGradient id="retailBg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f5e9d5"/><stop offset="1" stop-color="#d8b891"/></linearGradient></defs>
+      <rect width="640" height="410" rx="28" fill="url(#retailBg)"/>
+      <rect x="45" y="54" width="550" height="302" rx="25" fill="#fff" opacity=".93"/>
+      <rect x="67" y="76" width="506" height="45" rx="12" fill="#0b513b"/>
+      <circle cx="92" cy="98" r="8" fill="#efb33e"/><rect x="116" y="91" width="110" height="13" rx="6" fill="#fff" opacity=".9"/>
+      <g transform="translate(76 145)">
+        <rect width="142" height="171" rx="16" fill="#f3f5f4"/>
+        <path d="M48 43 71 27l23 16 20 8-15 34-14-9v56H57V76l-14 9-15-34Z" fill="#1d6f53"/>
+        <rect x="25" y="145" width="92" height="11" rx="5" fill="#bac8c1"/>
+      </g>
+      <g transform="translate(249 145)">
+        <rect width="142" height="171" rx="16" fill="#f7f0e7"/>
+        <path d="M52 39c5-20 33-20 38 0l13 90H39Z" fill="#d79b2e"/><path d="M57 43c0-20 28-20 28 0" fill="none" stroke="#6b4517" stroke-width="7"/>
+        <rect x="25" y="145" width="92" height="11" rx="5" fill="#cbbda8"/>
+      </g>
+      <g transform="translate(422 145)">
+        <rect width="142" height="171" rx="16" fill="#eef4f1"/>
+        <path d="M35 45h72l-8 83H43Z" fill="#8e4b38"/><path d="M51 45c0-28 40-28 40 0" fill="none" stroke="#593124" stroke-width="7"/>
+        <rect x="25" y="145" width="92" height="11" rx="5" fill="#bac8c1"/>
+      </g>
+    </svg>
+  </div>
+  <div class="visual-edition-copy"><span>02</span><div><h3>Retail &amp; fashion</h3><p>Products • branches • customers</p></div></div>
+</article>
+<article class="visual-edition-card salon-edition" tabindex="0">
+  <div class="solution-visual" aria-hidden="true">
+    <svg viewBox="0 0 640 410" role="img">
+      <defs><linearGradient id="salonBg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#dfeee8"/><stop offset="1" stop-color="#8db9a6"/></linearGradient></defs>
+      <rect width="640" height="410" rx="28" fill="url(#salonBg)"/>
+      <circle cx="118" cy="82" r="108" fill="#fff" opacity=".28"/>
+      <rect x="54" y="58" width="340" height="294" rx="25" fill="#fff" opacity=".95"/>
+      <text x="82" y="100" fill="#103a2d" font-size="22" font-family="Georgia" font-weight="700">Today’s appointments</text>
+      <g transform="translate(82 126)"><rect width="284" height="57" rx="14" fill="#edf6f1"/><circle cx="30" cy="28" r="15" fill="#0b6a4b"/><rect x="58" y="15" width="105" height="9" rx="4" fill="#27473b"/><rect x="58" y="34" width="72" height="7" rx="3" fill="#9eafa7"/><rect x="217" y="14" width="48" height="28" rx="14" fill="#dff2e8"/></g>
+      <g transform="translate(82 198)"><rect width="284" height="57" rx="14" fill="#fff4de"/><circle cx="30" cy="28" r="15" fill="#dfab3c"/><rect x="58" y="15" width="112" height="9" rx="4" fill="#27473b"/><rect x="58" y="34" width="84" height="7" rx="3" fill="#9eafa7"/><rect x="217" y="14" width="48" height="28" rx="14" fill="#f7e8bb"/></g>
+      <g transform="translate(82 270)"><rect width="284" height="57" rx="14" fill="#edf6f1"/><circle cx="30" cy="28" r="15" fill="#0b6a4b"/><rect x="58" y="15" width="96" height="9" rx="4" fill="#27473b"/><rect x="58" y="34" width="65" height="7" rx="3" fill="#9eafa7"/><rect x="217" y="14" width="48" height="28" rx="14" fill="#dff2e8"/></g>
+      <g transform="translate(433 90)"><circle cx="70" cy="70" r="70" fill="#0b513b"/><path d="M43 38c28 20 28 46 0 66M97 38c-28 20-28 46 0 66" fill="none" stroke="#efb33e" stroke-width="10" stroke-linecap="round"/><circle cx="70" cy="70" r="9" fill="#fff"/></g>
+      <rect x="425" y="260" width="155" height="63" rx="18" fill="#fff" opacity=".95"/><text x="503" y="286" text-anchor="middle" fill="#0b513b" font-size="12" font-family="Arial" font-weight="700">NEXT AVAILABLE</text><text x="503" y="308" text-anchor="middle" fill="#183a2f" font-size="19" font-family="Georgia" font-weight="700">2:30 PM</text>
+    </svg>
+  </div>
+  <div class="visual-edition-copy"><span>03</span><div><h3>Salons &amp; services</h3><p>Appointments • staff • reminders</p></div></div>
+</article>
+<article class="visual-edition-card custom-edition" tabindex="0">
+  <div class="solution-visual" aria-hidden="true">
+    <svg viewBox="0 0 640 410" role="img">
+      <defs><linearGradient id="customBg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#082f24"/><stop offset="1" stop-color="#0d704f"/></linearGradient></defs>
+      <rect width="640" height="410" rx="28" fill="url(#customBg)"/>
+      <g opacity=".18" stroke="#fff"><path d="M0 82h640M0 164h640M0 246h640M0 328h640M106 0v410M212 0v410M318 0v410M424 0v410M530 0v410"/></g>
+      <rect x="58" y="70" width="210" height="270" rx="22" fill="#fff" opacity=".97"/>
+      <rect x="82" y="96" width="74" height="11" rx="5" fill="#0b5a40"/>
+      <rect x="82" y="128" width="160" height="44" rx="11" fill="#edf5f1"/><rect x="96" y="142" width="82" height="8" rx="4" fill="#24483a"/><circle cx="220" cy="150" r="10" fill="#27aa73"/>
+      <rect x="82" y="186" width="160" height="44" rx="11" fill="#fff2d4"/><rect x="96" y="200" width="97" height="8" rx="4" fill="#24483a"/><circle cx="220" cy="208" r="10" fill="#e0aa39"/>
+      <rect x="82" y="244" width="160" height="44" rx="11" fill="#edf5f1"/><rect x="96" y="258" width="68" height="8" rx="4" fill="#24483a"/><circle cx="220" cy="266" r="10" fill="#27aa73"/>
+      <rect x="82" y="302" width="104" height="17" rx="8" fill="#0b5a40"/>
+      <g transform="translate(313 84)">
+        <circle cx="118" cy="118" r="105" fill="none" stroke="#e8b140" stroke-width="2" opacity=".55"/>
+        <circle cx="118" cy="118" r="65" fill="#efb33e"/><circle cx="118" cy="118" r="28" fill="#0b513b"/>
+        <g fill="#fff"><rect x="100" y="-1" width="36" height="58" rx="12"/><rect x="100" y="179" width="36" height="58" rx="12"/><rect x="-1" y="100" width="58" height="36" rx="12"/><rect x="179" y="100" width="58" height="36" rx="12"/></g>
+      </g>
+      <rect x="345" y="320" width="226" height="42" rx="13" fill="#fff" opacity=".95"/><text x="458" y="346" text-anchor="middle" fill="#0b513b" font-size="14" font-family="Arial" font-weight="700">CUSTOM WORKFLOW • LIVE</text>
+    </svg>
+  </div>
+  <div class="visual-edition-copy"><span>04</span><div><h3>Custom operations</h3><p>Forms • live work • history</p></div></div>
+</article>
+</div>
+<div class="visual-edition-dots" id="visualEditionDots" aria-label="Business edition slider controls">
+  <button class="active" aria-label="Show food and hospitality"></button><button aria-label="Show retail and fashion"></button><button aria-label="Show salons and services"></button><button aria-label="Show custom operations"></button>
 </div>
 </div>
 </section>
@@ -4425,5 +4549,26 @@ body{padding-bottom:88px}
   lightbox && lightbox.addEventListener('click', e=>{ if(e.target===lightbox) closePreview(); });
   document.addEventListener('keydown', e=>{ if(e.key==='Escape') closePreview(); });
 })();
-</script></body>
+</script>
+<script id="build16-visual-edition-slider">
+(function(){
+  const slider=document.getElementById('visualEditionSlider');
+  const dots=[...document.querySelectorAll('#visualEditionDots button')];
+  if(!slider||!dots.length) return;
+  const cards=[...slider.querySelectorAll('.visual-edition-card')];
+  const setActive=(i)=>dots.forEach((d,n)=>d.classList.toggle('active',n===i));
+  let ticking=false;
+  slider.addEventListener('scroll',()=>{
+    if(ticking) return; ticking=true;
+    requestAnimationFrame(()=>{
+      const x=slider.scrollLeft;
+      let best=0,dist=Infinity;
+      cards.forEach((c,i)=>{const v=Math.abs(c.offsetLeft-x-slider.offsetLeft);if(v<dist){dist=v;best=i}});
+      setActive(best);ticking=false;
+    });
+  },{passive:true});
+  dots.forEach((d,i)=>d.addEventListener('click',()=>cards[i].scrollIntoView({behavior:'smooth',block:'nearest',inline:'start'})));
+})();
+</script>
+</body>
 </html>
