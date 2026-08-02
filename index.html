@@ -2740,7 +2740,392 @@ body{padding-bottom:88px}
   .v13-dashboard-lightbox-stage .v13-hero-manager{display:grid!important;grid-template-columns:repeat(3,1fr)!important}
   body.dashboard-preview-open{overflow:hidden!important}
 }
-</style></head>
+</style>
+<style id="build13-compact-flow-no-autoscroll">
+/* Build 13: compact mobile operational flow */
+@media (max-width:700px){
+  .enterprise-outcomes{padding:58px 0 62px!important}
+  .enterprise-outcomes .enterprise-section-head{margin-bottom:22px!important}
+  .enterprise-outcomes .v11-title{font-size:clamp(34px,10vw,43px)!important;line-height:1.02!important}
+  .enterprise-outcomes .v11-subtitle{font-size:14px!important;line-height:1.55!important;margin-top:14px!important}
+  .outcome-flow{display:grid!important;grid-template-columns:1fr!important;gap:10px!important}
+  .outcome-flow>i{display:none!important}
+  .outcome-flow>div{
+    min-height:0!important;padding:15px 16px!important;border-radius:15px!important;
+    display:grid!important;grid-template-columns:38px 1fr!important;
+    column-gap:12px!important;row-gap:3px!important;align-items:center!important;
+    box-shadow:0 9px 24px rgba(10,52,40,.06)!important
+  }
+  .outcome-flow b{
+    grid-row:1 / span 2!important;width:34px!important;height:34px!important;
+    margin:0!important;border-radius:10px!important;font-size:13px!important
+  }
+  .outcome-flow strong{
+    margin:0!important;font-size:17px!important;line-height:1.15!important
+  }
+  .outcome-flow span{
+    font-size:11px!important;line-height:1.42!important;margin:0!important
+  }
+  /* Keep the automated tour's label movement horizontal only. */
+  .pt-flow-step-labels{scroll-behavior:smooth!important;overscroll-behavior-x:contain!important}
+}
+</style>
+
+<style id="build14-mobile-gap-removal-polish">
+/* BUILD 14 — mobile-only vertical rhythm and empty-space cleanup */
+@media (max-width: 700px){
+  /* Consistent, compact section rhythm */
+  .v11-section,
+  .enterprise-solutions,
+  .v13-feature-detail,
+  .enterprise-outcomes,
+  .secure-access-section,
+  .v13-web-controls,
+  .pt-flow-section,
+  .v13-why,
+  .enterprise-delivery,
+  .v12-pricing,
+  .v12-faq,
+  .v13-contact{
+    padding-top:48px!important;
+    padding-bottom:48px!important;
+    min-height:0!important;
+  }
+
+  /* Remove inherited spacer heights and oversized margins */
+  .enterprise-section-head,
+  .v13-feature-head,
+  .section-head{
+    margin-bottom:20px!important;
+  }
+  .v11-subtitle,
+  .section-head p{
+    margin-top:12px!important;
+    margin-bottom:0!important;
+  }
+  .v13-feature-grid,
+  .enterprise-solution-grid,
+  .v11-platform-grid,
+  .v11-screen-story,
+  .v11-industries,
+  .v11-delivery,
+  .v12-pricing-grid,
+  .v12-faq-list,
+  .delivery-grid{
+    margin-top:22px!important;
+  }
+
+  /* General mobile cards: less internal dead space */
+  .enterprise-solution-grid article,
+  .v13-feature-grid article,
+  .secure-access-card,
+  .v13-why article,
+  .delivery-grid article,
+  .v12-plan,
+  .v12-faq details{
+    min-height:0!important;
+  }
+  .enterprise-solution-grid article,
+  .v13-feature-grid article,
+  .secure-access-card,
+  .v13-why article,
+  .delivery-grid article{
+    padding:20px!important;
+  }
+
+  /* Platform orbit: retain the diagram, remove the large blank canvas */
+  #platform .v11-platform-grid{
+    gap:18px!important;
+  }
+  #platform .v11-orbit{
+    min-height:390px!important;
+    height:390px!important;
+    margin:0!important;
+    overflow:hidden!important;
+  }
+  #platform .v11-core{
+    transform:scale(.62)!important;
+  }
+  #platform .v11-orbit-node{
+    transform:scale(.72)!important;
+    max-width:122px!important;
+  }
+
+  /* Solutions and customer journey: eliminate beige voids */
+  .enterprise-solutions{
+    padding-bottom:44px!important;
+  }
+  .v13-feature-detail{
+    padding-top:44px!important;
+  }
+  .v13-feature-grid{
+    gap:12px!important;
+  }
+  .v13-feature-grid article{
+    margin:0!important;
+  }
+
+  /* Operational flow already compact; tighten surrounding section */
+  .enterprise-outcomes{
+    padding-top:44px!important;
+    padding-bottom:44px!important;
+  }
+  .outcome-flow{
+    margin-top:18px!important;
+    gap:8px!important;
+  }
+  .outcome-flow>div{
+    padding:12px 14px!important;
+    margin:0!important;
+  }
+
+  /* Protected administration */
+  .secure-access-section{
+    padding-top:44px!important;
+    padding-bottom:44px!important;
+  }
+  .secure-access-section .security-grid,
+  .secure-access-section .secure-grid{
+    gap:14px!important;
+    margin-top:20px!important;
+  }
+  .secure-access-section ul{
+    margin-bottom:0!important;
+  }
+  .secure-note{
+    margin-top:16px!important;
+  }
+
+  /* Website controls and complete dashboard preview */
+  .v13-web-controls{
+    padding-top:46px!important;
+    padding-bottom:46px!important;
+  }
+  .v13-dashboard-preview-wrap{
+    margin-top:22px!important;
+    margin-bottom:0!important;
+  }
+  .v13-admin-window{
+    margin-top:0!important;
+  }
+
+  /* Product experience: compact stage without cutting scenes */
+  .pt-flow-section{
+    padding-top:46px!important;
+    padding-bottom:46px!important;
+  }
+  .pt-flow-shell{
+    margin-top:22px!important;
+    min-height:0!important;
+  }
+  .pt-flow-canvas{
+    min-height:500px!important;
+    height:500px!important;
+  }
+  .pt-flow-panel{
+    min-height:0!important;
+  }
+
+  /* Why + delivery sections */
+  .v13-why{
+    padding-top:46px!important;
+    padding-bottom:46px!important;
+  }
+  .v13-why-grid{
+    gap:12px!important;
+    margin-top:20px!important;
+  }
+  .enterprise-delivery{
+    padding-top:46px!important;
+    padding-bottom:46px!important;
+  }
+  .delivery-grid{
+    gap:12px!important;
+  }
+  .delivery-grid article{
+    margin:0!important;
+  }
+
+  /* Packages: remove the large gap before heading and after custom quote */
+  .v12-pricing{
+    padding-top:48px!important;
+    padding-bottom:48px!important;
+  }
+  .v12-pricing-grid{
+    gap:16px!important;
+  }
+  .v12-plan{
+    padding:22px!important;
+  }
+  .v12-custom-note{
+    margin-top:20px!important;
+    padding:20px!important;
+    gap:14px!important;
+  }
+
+  /* FAQ: close the wide white gap */
+  .v12-faq{
+    padding-top:48px!important;
+    padding-bottom:48px!important;
+  }
+  .v12-faq-list{
+    gap:9px!important;
+  }
+  .v12-faq details{
+    padding:0 15px!important;
+  }
+  .v12-faq summary{
+    padding:16px 0!important;
+  }
+  .v12-faq details p{
+    padding-bottom:16px!important;
+  }
+
+  /* Prevent the floating consultation pill from covering headings/content */
+  .enterprise-demo-launcher{
+    position:fixed!important;
+    right:10px!important;
+    bottom:10px!important;
+    transform:scale(.88)!important;
+    transform-origin:right bottom!important;
+  }
+}
+
+@media (max-width: 430px){
+  .v11-section,
+  .enterprise-solutions,
+  .v13-feature-detail,
+  .enterprise-outcomes,
+  .secure-access-section,
+  .v13-web-controls,
+  .pt-flow-section,
+  .v13-why,
+  .enterprise-delivery,
+  .v12-pricing,
+  .v12-faq,
+  .v13-contact{
+    padding-top:40px!important;
+    padding-bottom:40px!important;
+  }
+  #platform .v11-orbit{
+    min-height:360px!important;
+    height:360px!important;
+  }
+  .pt-flow-canvas{
+    min-height:460px!important;
+    height:460px!important;
+  }
+}
+</style>
+
+
+<style id="build15-mobile-hero-complete-compact">
+/* BUILD 15 — complete mobile hero dashboard + tighter page rhythm */
+@media (max-width:700px){
+  /* Hero dashboard must behave like one complete product picture. */
+  .enterprise-hero-v2-grid{gap:22px!important}
+  .enterprise-hero-v2-product{
+    position:relative!important;
+    width:100%!important;
+    min-height:0!important;
+    height:auto!important;
+    padding:0!important;
+    margin:0 auto!important;
+    overflow:hidden!important;
+  }
+  .enterprise-dashboard-window-v2{
+    position:relative!important;
+    left:auto!important;
+    right:auto!important;
+    top:auto!important;
+    bottom:auto!important;
+    width:100%!important;
+    max-width:100%!important;
+    height:auto!important;
+    margin:0 auto!important;
+    transform:none!important;
+    animation:none!important;
+    border-radius:16px!important;
+    overflow:hidden!important;
+    box-shadow:0 18px 46px rgba(0,0,0,.28)!important;
+  }
+  .enterprise-dashboard-shell{
+    width:100%!important;
+    height:300px!important;
+    min-height:300px!important;
+    grid-template-columns:58px minmax(0,1fr)!important;
+  }
+  .enterprise-sidebar{min-width:0!important;padding:9px 5px!important}
+  .enterprise-sidebar nav a{padding:6px 3px!important;font-size:5.5px!important}
+  .enterprise-dashboard-main{min-width:0!important;padding:9px 7px!important}
+  .enterprise-dashboard-head h3{font-size:16px!important}
+  .enterprise-dashboard-head button{font-size:5.5px!important;padding:6px!important}
+  .enterprise-kpi-grid{gap:5px!important}
+  .enterprise-kpi-grid article{padding:7px!important}
+  .enterprise-kpi-grid article strong{font-size:14px!important}
+  .enterprise-chart-card{min-height:135px!important}
+  .enterprise-chart{height:70px!important}
+
+  /* The floating alerts looked detached and covered the screenshot on phones. */
+  .enterprise-floating-note{display:none!important}
+  .dashboard-halo,.enterprise-hero-v2-product::before,.enterprise-hero-v2-product::after{display:none!important}
+
+  /* Bring the industries directly under the dashboard. */
+  .enterprise-industry-bar{margin-top:0!important;padding:14px 0 18px!important}
+  .enterprise-industry-bar-inner{padding-top:0!important}
+
+  /* Tighter mobile page rhythm; preserve breathing room around headings. */
+  .v11-section,
+  .enterprise-solutions,
+  .v13-feature-detail,
+  .enterprise-outcomes,
+  .secure-access-section,
+  .v13-web-controls,
+  .pt-flow-section,
+  .v13-why,
+  .enterprise-delivery,
+  .v12-pricing,
+  .v12-faq,
+  .v13-contact{
+    padding-top:36px!important;
+    padding-bottom:36px!important;
+  }
+  .enterprise-section-head,.v13-feature-head,.section-head{margin-bottom:16px!important}
+  .v13-feature-grid,.enterprise-solution-grid,.v11-platform-grid,.v11-screen-story,
+  .v11-industries,.v11-delivery,.v12-pricing-grid,.v12-faq-list,.delivery-grid{
+    margin-top:16px!important;
+  }
+  .enterprise-solution-grid,.v13-feature-grid,.v13-why-grid,.delivery-grid{gap:10px!important}
+  .enterprise-solution-grid article,.v13-feature-grid article,.secure-access-card,
+  .v13-why article,.delivery-grid article{padding:17px!important}
+
+  /* Eliminate the remaining diagram and section voids. */
+  #platform .v11-orbit{height:330px!important;min-height:330px!important;margin:-8px 0 0!important}
+  .v13-dashboard-preview-wrap{margin-top:16px!important}
+  .pt-flow-shell{margin-top:16px!important}
+  .pt-flow-canvas{height:430px!important;min-height:430px!important}
+  .v12-custom-note{margin-top:15px!important;padding:17px!important}
+
+  /* Floating consultation should never cover section headings. */
+  .enterprise-demo-launcher{display:none!important}
+}
+@media (max-width:430px){
+  .enterprise-hero-v2{padding-bottom:24px!important}
+  .enterprise-dashboard-shell{height:280px!important;min-height:280px!important;grid-template-columns:54px minmax(0,1fr)!important}
+  .enterprise-dashboard-head h3{font-size:15px!important}
+  .enterprise-kpi-grid article strong{font-size:13px!important}
+  .enterprise-chart-card{min-height:124px!important}
+  .v11-section,.enterprise-solutions,.v13-feature-detail,.enterprise-outcomes,
+  .secure-access-section,.v13-web-controls,.pt-flow-section,.v13-why,
+  .enterprise-delivery,.v12-pricing,.v12-faq,.v13-contact{
+    padding-top:32px!important;padding-bottom:32px!important;
+  }
+  #platform .v11-orbit{height:310px!important;min-height:310px!important}
+  .pt-flow-canvas{height:410px!important;min-height:410px!important}
+}
+</style>
+
+</head>
 <body>
 <div aria-hidden="true" class="v10-loader" id="v10Loader">
 <div class="v10-loader-inner">
@@ -3961,7 +4346,12 @@ body{padding-bottom:88px}
       if(i===next) p.classList.add('mobile-active');
     });
     steps.forEach((s,i)=>s.classList.toggle('mobile-active-step',i===next));
-    steps[next]?.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
+    const labels=steps[next]?.parentElement;
+    if(labels && steps[next]){
+      const target=steps[next];
+      const desired=target.offsetLeft-(labels.clientWidth-target.offsetWidth)/2;
+      labels.scrollTo({left:Math.max(0,desired),behavior:'smooth'});
+    }
     last=next; index=next; restartProgress();
   }
   function start(){
