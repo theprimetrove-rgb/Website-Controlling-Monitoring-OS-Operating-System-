@@ -1571,6 +1571,496 @@ body{padding-bottom:88px}
   .enterprise-demo-launcher{right:10px!important;bottom:66px!important}
 }
 
+
+/* BUILD 4 — enterprise hero rebuild */
+.enterprise-hero{
+  position:relative;
+  min-height:920px!important;
+  padding:95px 0 0!important;
+  overflow:hidden;
+  background:
+    linear-gradient(rgba(255,255,255,.028) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.028) 1px,transparent 1px),
+    radial-gradient(circle at 72% 35%,rgba(29,145,105,.22),transparent 28%),
+    linear-gradient(135deg,#103e31 0%,#07533e 44%,#073b2e 100%)!important;
+  background-size:44px 44px,44px 44px,auto,auto!important;
+}
+.enterprise-hero-bg{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.hero-orb{position:absolute;border-radius:50%;filter:blur(2px);opacity:.24;animation:heroOrbFloat 10s ease-in-out infinite}
+.orb-a{width:160px;height:160px;right:8%;top:12%;background:#e5ad32}
+.orb-b{width:220px;height:220px;right:-4%;bottom:10%;background:#2eb07e;animation-delay:-3s}
+.orb-c{width:110px;height:110px;left:44%;top:6%;background:#ffe07a;animation-delay:-6s}
+.hero-particle{position:absolute;width:5px;height:5px;border-radius:50%;background:#f2c85a;opacity:.55;animation:heroParticle 8s linear infinite}
+.p1{left:14%;top:26%}.p2{left:46%;top:68%;animation-delay:-2s}.p3{right:18%;top:23%;animation-delay:-4s}.p4{right:8%;bottom:18%;animation-delay:-5s}.p5{left:8%;bottom:12%;animation-delay:-1s}
+.enterprise-hero-grid{
+  position:relative;z-index:2;
+  display:grid;grid-template-columns:minmax(0,.92fr) minmax(650px,1.08fr);
+  gap:64px;align-items:center;
+}
+.enterprise-hero-copy{padding-bottom:70px}
+.enterprise-hero-copy .kicker{color:#ffd166;margin-bottom:18px}
+.enterprise-hero-copy h1{
+  margin:0;
+  max-width:760px;
+  font:700 clamp(58px,5.5vw,92px)/.92 Georgia,serif;
+  letter-spacing:-.045em;
+  color:#fff;
+}
+.enterprise-hero-copy .lead{
+  max-width:690px;margin:26px 0 22px;
+  color:#d8e6e1;font-size:18px;line-height:1.65;
+}
+.enterprise-chip-grid{display:flex;flex-wrap:wrap;gap:9px;margin:24px 0 30px}
+.enterprise-chip-grid span{
+  padding:9px 13px;border:1px solid rgba(255,255,255,.17);border-radius:999px;
+  background:rgba(255,255,255,.07);color:#f4faf7;font-size:11px;font-weight:700;
+  backdrop-filter:blur(8px);opacity:0;animation:enterpriseChipIn .45s forwards;
+  animation-delay:var(--delay)
+}
+.enterprise-hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.enterprise-primary-btn,.enterprise-secondary-btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  min-height:52px;padding:0 20px;border-radius:13px;text-decoration:none;font-weight:900;
+  transition:.25s ease
+}
+.enterprise-primary-btn{background:#efb53a;color:#17392f;box-shadow:0 14px 32px rgba(239,181,58,.22)}
+.enterprise-primary-btn span{font-size:18px;transition:transform .25s ease}
+.enterprise-primary-btn:hover{transform:translateY(-3px);box-shadow:0 20px 40px rgba(239,181,58,.3)}
+.enterprise-primary-btn:hover span{transform:translateX(4px)}
+.enterprise-secondary-btn{border:1px solid rgba(255,255,255,.35);color:#fff;background:rgba(255,255,255,.055)}
+.enterprise-secondary-btn:hover{transform:translateY(-3px);background:rgba(255,255,255,.1)}
+.enterprise-proof-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:30px;max-width:690px}
+.enterprise-proof-grid>div{padding:15px 16px;border-radius:14px;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.11)}
+.enterprise-proof-grid b,.enterprise-proof-grid span{display:block}
+.enterprise-proof-grid b{font:700 28px/1 Georgia,serif;color:#fff}
+.enterprise-proof-grid span{font-size:9px;color:#bcd0c8;margin-top:6px;text-transform:uppercase;letter-spacing:.07em;line-height:1.4}
+
+.enterprise-hero-product{position:relative;min-height:690px;perspective:1400px}
+.enterprise-dashboard-window{
+  position:absolute;left:50%;top:50%;width:680px;transform:translate(-49%,-48%) rotateY(-5deg) rotateX(1deg);
+  border:1px solid rgba(255,255,255,.3);border-radius:24px;overflow:hidden;
+  background:#f4f7f6;box-shadow:0 45px 100px rgba(0,0,0,.38);
+  animation:enterpriseDashboardFloat 7s ease-in-out infinite
+}
+.enterprise-browser-top{height:42px;padding:0 14px;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:14px;background:#e9efed;color:#46645b}
+.enterprise-browser-dots{display:flex;gap:6px}.enterprise-browser-dots span{width:9px;height:9px;border-radius:50%;background:#9db0aa}
+.enterprise-browser-address{justify-self:center;width:250px;padding:7px 12px;border-radius:8px;background:#f8fbfa;text-align:center;font-size:9px}
+.enterprise-live-state{display:flex;align-items:center;gap:6px;font-size:9px;font-weight:900}.enterprise-live-state i{width:8px;height:8px;border-radius:50%;background:#17b97a;box-shadow:0 0 0 5px rgba(23,185,122,.12)}
+.enterprise-dashboard-shell{display:grid;grid-template-columns:145px 1fr;min-height:500px}
+.enterprise-sidebar{padding:16px 12px;background:#0c2d24;color:#fff;display:flex;flex-direction:column}
+.enterprise-sidebar-brand{display:flex;align-items:center;gap:8px;margin-bottom:20px}.enterprise-sidebar-brand span{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;background:#eab33a;color:#17372e;font-weight:900}.enterprise-sidebar-brand b{font-size:10px}
+.enterprise-sidebar nav{display:grid;gap:6px}.enterprise-sidebar nav a{padding:9px 10px;border-radius:8px;color:#a8c0b7;font-size:9px}.enterprise-sidebar nav a.active{background:rgba(255,255,255,.1);color:#fff}
+.enterprise-user-mini{margin-top:auto;padding-top:14px;border-top:1px solid rgba(255,255,255,.1);display:flex;align-items:center;gap:8px}.enterprise-user-mini i{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:#1a5d49;font-style:normal;font-size:8px}.enterprise-user-mini b,.enterprise-user-mini small{display:block}.enterprise-user-mini b{font-size:8px}.enterprise-user-mini small{font-size:7px;color:#7fd5b0}
+.enterprise-dashboard-main{padding:18px;background:#f6f8f7}
+.enterprise-dashboard-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:15px}.enterprise-dashboard-head small{display:block;color:#0b694d;font-size:7px;letter-spacing:.12em;font-weight:900}.enterprise-dashboard-head h3{margin:4px 0 0;font:700 24px/1 Georgia,serif;color:#15382e}.enterprise-dashboard-head button{border:0;border-radius:9px;background:#0e6c4f;color:#fff;padding:9px 11px;font-size:8px;font-weight:900}
+.enterprise-kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}
+.enterprise-kpi-grid article{padding:12px;border-radius:12px;background:#fff;border:1px solid #dee7e3;box-shadow:0 7px 20px rgba(12,56,42,.06)}
+.enterprise-kpi-grid span,.enterprise-kpi-grid strong,.enterprise-kpi-grid small{display:block}.enterprise-kpi-grid span{font-size:7px;color:#6c8078}.enterprise-kpi-grid strong{font:700 20px/1 Georgia,serif;color:#12392e;margin:6px 0}.enterprise-kpi-grid small{font-size:7px;color:#139167}
+.enterprise-dashboard-lower{display:grid;grid-template-columns:1.25fr .75fr;gap:10px;margin-top:10px}
+.enterprise-chart-card,.enterprise-activity-card{padding:13px;border-radius:12px;background:#fff;border:1px solid #dee7e3;min-height:220px}
+.enterprise-card-head{display:flex;justify-content:space-between;align-items:center}.enterprise-card-head b,.enterprise-card-head small{display:block}.enterprise-card-head b{font-size:9px;color:#16392f}.enterprise-card-head small{font-size:7px;color:#778981;margin-top:2px}.enterprise-card-head em{font-style:normal;color:#168b66;font-size:8px;font-weight:900}
+.enterprise-chart{height:130px;display:flex;align-items:end;gap:9px;padding:18px 8px 0}.enterprise-chart i{flex:1;height:var(--h);border-radius:8px 8px 3px 3px;background:linear-gradient(#23a575,#0a654b);transform-origin:bottom;animation:enterpriseBarGrow 1.2s ease both}.enterprise-chart i:nth-child(2){animation-delay:.1s}.enterprise-chart i:nth-child(3){animation-delay:.2s}.enterprise-chart i:nth-child(4){animation-delay:.3s}.enterprise-chart i:nth-child(5){animation-delay:.4s}.enterprise-chart i:nth-child(6){animation-delay:.5s}.enterprise-chart i:nth-child(7){animation-delay:.6s}
+.enterprise-chart-labels{display:grid;grid-template-columns:repeat(7,1fr);gap:9px;text-align:center;color:#7c8b86;font-size:7px}
+.enterprise-online-dot{width:8px;height:8px;border-radius:50%;background:#14b879;box-shadow:0 0 0 5px rgba(20,184,121,.12)}
+.enterprise-activity-feed{display:grid;gap:9px;margin-top:12px}.enterprise-activity-feed>div{display:grid;grid-template-columns:28px 1fr;gap:8px;align-items:center;padding:9px;border-radius:9px;background:#f5f9f7}.enterprise-activity-feed i{width:28px;height:28px;border-radius:8px;display:grid;place-items:center;background:#e1f3eb;color:#0c6a4e;font-style:normal;font-weight:900;font-size:9px}.enterprise-activity-feed b,.enterprise-activity-feed small{display:block}.enterprise-activity-feed b{font-size:8px}.enterprise-activity-feed small{font-size:7px;color:#74857f;margin-top:2px}
+
+.enterprise-floating-note{position:absolute;z-index:8;display:flex;align-items:center;gap:10px;padding:12px 14px;border-radius:14px;background:rgba(255,255,255,.95);color:#15382e;box-shadow:0 18px 45px rgba(0,0,0,.24);backdrop-filter:blur(12px);min-width:190px;animation:enterpriseNoteCycle 12s infinite}
+.enterprise-floating-note i{width:28px;height:28px;border-radius:9px;display:grid;place-items:center;background:#ddf3e9;color:#0d6c4f;font-style:normal;font-weight:900}.enterprise-floating-note b,.enterprise-floating-note small{display:block}.enterprise-floating-note b{font-size:10px}.enterprise-floating-note small{font-size:8px;color:#70847c;margin-top:2px}
+.note-a{left:-1%;top:14%}.note-b{right:-1%;top:22%;animation-delay:-3s}.note-c{right:1%;bottom:16%;animation-delay:-6s}.note-d{left:8%;bottom:4%;animation-delay:-9s}
+.enterprise-industry-strip{position:relative;z-index:3;border-top:1px solid rgba(255,255,255,.1);background:rgba(2,31,23,.45);backdrop-filter:blur(10px)}
+.enterprise-industry-strip .wrap{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:12px;padding:20px 0}.enterprise-industry-strip span{color:#82a297;font-size:10px;text-transform:uppercase;letter-spacing:.12em}.enterprise-industry-strip b{padding:8px 11px;border-radius:999px;background:rgba(255,255,255,.06);color:#dce9e4;font-size:10px;font-weight:700}
+
+@keyframes enterpriseChipIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@keyframes enterpriseDashboardFloat{0%,100%{transform:translate(-49%,-48%) rotateY(-5deg) rotateX(1deg) translateY(0)}50%{transform:translate(-49%,-48%) rotateY(-3deg) rotateX(0) translateY(-12px)}}
+@keyframes enterpriseBarGrow{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+@keyframes enterpriseNoteCycle{0%,12%{opacity:0;transform:translateY(12px) scale(.96)}18%,72%{opacity:1;transform:none}80%,100%{opacity:0;transform:translateY(-10px) scale(.98)}}
+@keyframes heroOrbFloat{0%,100%{transform:translate3d(0,0,0)}50%{transform:translate3d(16px,-18px,0)}}
+@keyframes heroParticle{0%{transform:translateY(0);opacity:.2}50%{opacity:.8}100%{transform:translateY(-90px);opacity:0}}
+
+@media(max-width:1250px){
+  .enterprise-hero-grid{grid-template-columns:1fr;gap:10px}
+  .enterprise-hero-copy{padding-bottom:10px}
+  .enterprise-hero-product{min-height:700px}
+  .enterprise-dashboard-window{width:min(760px,94vw)}
+}
+@media(max-width:760px){
+  .enterprise-hero{padding-top:70px!important;min-height:auto!important}
+  .enterprise-hero-copy h1{font-size:clamp(48px,14vw,72px)}
+  .enterprise-proof-grid{grid-template-columns:1fr}
+  .enterprise-hero-product{min-height:560px}
+  .enterprise-dashboard-window{width:710px;transform:translate(-50%,-47%) scale(.74)!important}
+  .enterprise-floating-note{display:none}
+  .enterprise-industry-strip .wrap{padding-inline:16px}
+}
+@media(max-width:520px){
+  .enterprise-chip-grid span{font-size:10px}
+  .enterprise-hero-actions{display:grid}
+  .enterprise-primary-btn,.enterprise-secondary-btn{width:100%}
+  .enterprise-dashboard-window{transform:translate(-50%,-48%) scale(.57)!important}
+  .enterprise-hero-product{min-height:470px}
+}
+@media(prefers-reduced-motion:reduce){
+  .enterprise-hero *{animation:none!important}
+}
+
+
+/* BUILD 5 — rebuilt premium hero composition */
+.enterprise-hero-v2{
+  min-height:860px!important;
+  padding:82px 0 58px!important;
+  display:flex;
+  align-items:center;
+}
+.enterprise-hero-v2-grid{
+  position:relative;
+  z-index:2;
+  display:grid;
+  grid-template-columns:minmax(390px,.78fr) minmax(680px,1.22fr);
+  gap:56px;
+  align-items:center;
+}
+.enterprise-hero-v2-copy{max-width:610px}
+.enterprise-hero-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  padding:9px 13px;
+  margin-bottom:22px;
+  border:1px solid rgba(255,255,255,.15);
+  border-radius:999px;
+  background:rgba(255,255,255,.065);
+  color:#e8f4ef;
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  backdrop-filter:blur(10px);
+}
+.enterprise-hero-badge span{
+  width:8px;height:8px;border-radius:50%;
+  background:#efb53a;
+  box-shadow:0 0 0 6px rgba(239,181,58,.13);
+}
+.enterprise-hero-v2-copy h1{
+  max-width:600px!important;
+  margin:0!important;
+  font:700 clamp(54px,5vw,82px)/.94 Georgia,serif!important;
+  letter-spacing:-.045em!important;
+  color:#fff!important;
+}
+.enterprise-hero-v2-copy .lead{
+  max-width:590px!important;
+  margin:24px 0 28px!important;
+  color:#d6e5df!important;
+  font-size:17px!important;
+  line-height:1.65!important;
+}
+.enterprise-hero-v2-actions{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-bottom:28px;
+}
+.tour-play{
+  width:24px;height:24px;border-radius:50%;
+  display:grid;place-items:center;
+  background:rgba(255,255,255,.1);
+  font-size:9px;
+}
+.enterprise-mini-proof{
+  display:flex;
+  align-items:center;
+  gap:13px;
+  margin:0 0 22px;
+}
+.proof-avatars{display:flex}
+.proof-avatars span{
+  width:31px;height:31px;border-radius:50%;
+  display:grid;place-items:center;
+  margin-left:-7px;
+  border:2px solid #0d4b39;
+  background:linear-gradient(135deg,#f0bd4e,#bf7b1d);
+  color:#16382e;font-size:9px;font-weight:900;
+}
+.proof-avatars span:first-child{margin-left:0}
+.enterprise-mini-proof strong,.enterprise-mini-proof small{display:block}
+.enterprise-mini-proof strong{font-size:11px;color:#fff;margin-bottom:3px}
+.enterprise-mini-proof small{font-size:9px;color:#9fb8af}
+.enterprise-proof-grid.compact{
+  max-width:560px;
+  grid-template-columns:repeat(3,1fr);
+  margin-top:0!important;
+}
+.enterprise-proof-grid.compact>div{
+  padding:13px 14px;
+  background:rgba(255,255,255,.045);
+}
+.enterprise-proof-grid.compact b{font-size:24px}
+.enterprise-proof-grid.compact span{font-size:8px}
+
+.enterprise-hero-v2-product{
+  position:relative;
+  min-height:650px;
+  perspective:1500px;
+}
+.enterprise-dashboard-window-v2{
+  width:760px!important;
+  left:50%!important;
+  top:50%!important;
+  transform:translate(-50%,-50%) rotateY(-4deg) rotateX(1deg)!important;
+  animation:enterpriseDashboardFloatV2 7s ease-in-out infinite!important;
+}
+.dashboard-halo{
+  position:absolute;
+  left:50%;top:50%;
+  border-radius:50%;
+  border:1px solid rgba(255,255,255,.1);
+  transform:translate(-50%,-50%);
+  pointer-events:none;
+}
+.halo-one{width:690px;height:690px;animation:haloRotate 20s linear infinite}
+.halo-two{width:520px;height:520px;animation:haloRotateReverse 16s linear infinite}
+.hero-line{
+  position:absolute;
+  height:1px;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.16),transparent);
+  transform-origin:left center;
+}
+.line-a{width:520px;right:2%;top:23%;transform:rotate(-12deg)}
+.line-b{width:460px;right:5%;bottom:19%;transform:rotate(11deg)}
+.enterprise-floating-note{min-width:205px}
+.note-a{left:-1%;top:9%}
+.note-b{right:-2%;top:18%}
+.note-c{right:1%;bottom:10%}
+.note-d{left:5%;bottom:0}
+
+.enterprise-industry-bar{
+  background:#082d24;
+  border-top:1px solid rgba(255,255,255,.07);
+  border-bottom:1px solid rgba(255,255,255,.07);
+}
+.enterprise-industry-bar-inner{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:12px;
+  padding:22px 0;
+}
+.enterprise-industry-bar span{
+  color:#7fa195;
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:.13em;
+}
+.enterprise-industry-bar b{
+  padding:8px 12px;
+  border-radius:999px;
+  background:rgba(255,255,255,.055);
+  color:#dce9e4;
+  font-size:10px;
+  font-weight:700;
+}
+
+@keyframes enterpriseDashboardFloatV2{
+  0%,100%{transform:translate(-50%,-50%) rotateY(-4deg) rotateX(1deg) translateY(0)}
+  50%{transform:translate(-50%,-50%) rotateY(-2deg) rotateX(0) translateY(-12px)}
+}
+@keyframes haloRotate{from{transform:translate(-50%,-50%) rotate(0)}to{transform:translate(-50%,-50%) rotate(360deg)}}
+@keyframes haloRotateReverse{from{transform:translate(-50%,-50%) rotate(360deg)}to{transform:translate(-50%,-50%) rotate(0)}}
+
+@media(max-width:1280px){
+  .enterprise-hero-v2-grid{
+    grid-template-columns:1fr;
+    gap:10px;
+  }
+  .enterprise-hero-v2-copy{
+    max-width:760px;
+    text-align:center;
+    margin:0 auto;
+  }
+  .enterprise-hero-v2-copy h1,
+  .enterprise-hero-v2-copy .lead{
+    margin-left:auto!important;
+    margin-right:auto!important;
+  }
+  .enterprise-hero-v2-actions,
+  .enterprise-mini-proof{
+    justify-content:center;
+  }
+  .enterprise-proof-grid.compact{margin-left:auto!important;margin-right:auto!important}
+  .enterprise-hero-v2-product{min-height:680px}
+}
+@media(max-width:820px){
+  .enterprise-hero-v2{padding-top:68px!important}
+  .enterprise-hero-v2-copy h1{font-size:clamp(46px,12vw,70px)!important}
+  .enterprise-dashboard-window-v2{
+    width:760px!important;
+    transform:translate(-50%,-50%) scale(.78)!important;
+    animation:none!important;
+  }
+  .enterprise-hero-v2-product{min-height:560px}
+  .dashboard-halo{display:none}
+  .enterprise-floating-note{display:none}
+}
+@media(max-width:560px){
+  .enterprise-hero-v2-actions{display:grid}
+  .enterprise-primary-btn,.enterprise-secondary-btn{width:100%}
+  .enterprise-proof-grid.compact{grid-template-columns:1fr}
+  .enterprise-dashboard-window-v2{
+    transform:translate(-50%,-50%) scale(.58)!important;
+  }
+  .enterprise-hero-v2-product{min-height:450px}
+  .enterprise-industry-bar-inner{padding-inline:16px}
+}
+
+
+/* BUILD 6 — clean hero correction */
+.enterprise-hero-v2{
+  min-height:auto!important;
+  padding:84px 0 72px!important;
+}
+.enterprise-hero-v2-grid{
+  grid-template-columns:minmax(410px,.84fr) minmax(650px,1.16fr)!important;
+  gap:48px!important;
+  align-items:center!important;
+}
+.enterprise-hero-v2-copy{
+  max-width:570px!important;
+}
+.enterprise-hero-v2-copy h1{
+  max-width:560px!important;
+  font-size:clamp(54px,4.7vw,78px)!important;
+  line-height:.96!important;
+}
+.enterprise-hero-v2-copy .lead{
+  max-width:555px!important;
+}
+.enterprise-hero-v2-product{
+  min-height:620px!important;
+}
+.enterprise-dashboard-window-v2{
+  width:720px!important;
+  transform:translate(-50%,-50%) rotateY(-2.5deg) rotateX(.5deg)!important;
+}
+.dashboard-halo.halo-one{
+  width:610px!important;
+  height:610px!important;
+  opacity:.52!important;
+}
+.dashboard-halo.halo-two{
+  width:455px!important;
+  height:455px!important;
+  opacity:.38!important;
+}
+.hero-orb{
+  opacity:.11!important;
+  filter:blur(10px)!important;
+}
+.orb-a{
+  width:125px!important;
+  height:125px!important;
+  right:10%!important;
+  top:12%!important;
+}
+.orb-b{
+  width:155px!important;
+  height:155px!important;
+  right:-2%!important;
+  bottom:7%!important;
+}
+.orb-c{
+  display:none!important;
+}
+.hero-particle{
+  opacity:.3!important;
+}
+.enterprise-floating-note{
+  min-width:190px!important;
+  max-width:210px!important;
+  padding:11px 13px!important;
+  animation:enterpriseNoteSoft 8s ease-in-out infinite!important;
+}
+.enterprise-floating-note.note-a{
+  left:1%!important;
+  top:13%!important;
+}
+.enterprise-floating-note.note-b{
+  right:0!important;
+  top:22%!important;
+  animation-delay:-4s!important;
+}
+.enterprise-industry-bar{
+  position:relative!important;
+  clear:both!important;
+  margin:0!important;
+}
+.enterprise-industry-bar-inner{
+  min-height:72px!important;
+  padding:18px 0!important;
+}
+.enterprise-trust{
+  clear:both!important;
+  padding-top:34px!important;
+}
+.enterprise-trust-grid{
+  position:relative!important;
+  z-index:1!important;
+}
+@keyframes enterpriseNoteSoft{
+  0%,100%{transform:translateY(0);opacity:.94}
+  50%{transform:translateY(-7px);opacity:1}
+}
+@media(max-width:1280px){
+  .enterprise-hero-v2-grid{
+    grid-template-columns:1fr!important;
+  }
+  .enterprise-hero-v2-copy{
+    max-width:740px!important;
+  }
+  .enterprise-hero-v2-product{
+    min-height:650px!important;
+  }
+}
+@media(max-width:820px){
+  .enterprise-floating-note{
+    display:none!important;
+  }
+  .enterprise-hero-v2-product{
+    min-height:535px!important;
+  }
+  .enterprise-dashboard-window-v2{
+    transform:translate(-50%,-50%) scale(.76)!important;
+  }
+}
+@media(max-width:560px){
+  .enterprise-hero-v2{
+    padding-top:62px!important;
+    padding-bottom:40px!important;
+  }
+  .enterprise-hero-v2-product{
+    min-height:430px!important;
+  }
+  .enterprise-dashboard-window-v2{
+    transform:translate(-50%,-50%) scale(.56)!important;
+  }
+}
+
+
+/* BUILD 6 — fixed floating action stack */
+.assurance-fab{
+  right:18px!important;
+  bottom:18px!important;
+}
+.enterprise-demo-launcher{
+  right:18px!important;
+  bottom:78px!important;
+}
+@media(max-width:700px){
+  .assurance-fab{right:10px!important;bottom:10px!important}
+  .enterprise-demo-launcher{right:10px!important;bottom:66px!important}
+}
+
 </style>
 
 <style id="premium-latest-overrides">
@@ -1643,114 +2133,181 @@ body{padding-bottom:88px}
 </header>
 
 <main>
-<section class="hero reveal" id="overview"><div class="v10-data-stream"><i class="v10-particle" style="left:0%;animation-duration:7s;animation-delay:-0.0s"></i><i class="v10-particle" style="left:13%;animation-duration:8s;animation-delay:-0.7s"></i><i class="v10-particle" style="left:26%;animation-duration:9s;animation-delay:-1.4s"></i><i class="v10-particle" style="left:39%;animation-duration:10s;animation-delay:-2.1s"></i><i class="v10-particle" style="left:52%;animation-duration:11s;animation-delay:-2.8s"></i><i class="v10-particle" style="left:65%;animation-duration:12s;animation-delay:-3.5s"></i><i class="v10-particle" style="left:78%;animation-duration:7s;animation-delay:-4.2s"></i><i class="v10-particle" style="left:91%;animation-duration:8s;animation-delay:-4.9s"></i><i class="v10-particle" style="left:7%;animation-duration:9s;animation-delay:-5.6s"></i><i class="v10-particle" style="left:20%;animation-duration:10s;animation-delay:-6.3s"></i><i class="v10-particle" style="left:33%;animation-duration:11s;animation-delay:-7.0s"></i><i class="v10-particle" style="left:46%;animation-duration:12s;animation-delay:-7.7s"></i><i class="v10-particle" style="left:59%;animation-duration:7s;animation-delay:-8.4s"></i><i class="v10-particle" style="left:72%;animation-duration:8s;animation-delay:-9.1s"></i><i class="v10-particle" style="left:85%;animation-duration:9s;animation-delay:-9.8s"></i><i class="v10-particle" style="left:1%;animation-duration:10s;animation-delay:-10.5s"></i><i class="v10-particle" style="left:14%;animation-duration:11s;animation-delay:-11.2s"></i><i class="v10-particle" style="left:27%;animation-duration:12s;animation-delay:-11.9s"></i></div>
-  <div class="hero-orb one"></div><div class="hero-orb two"></div><div class="wrap hero-grid">
-    <div class="hero-copy">
-      <div class="kicker">Adaptable digital operating platform</div>
-      <h1>Run your customer website and daily operations from one connected platform.</h1>
-      <p class="lead">Connect enquiries, orders, bookings, branches, staff tasks, customer records and WhatsApp updates in one secure operating platform built around your workflow.</p>
-      <div class="badges">
-        <span class="badge">Orders & enquiries</span>
-        <span class="badge">Bookings & appointments</span>
-        <span class="badge">Multi-branch management</span>
-        <span class="badge">Customer history</span>
-        <span class="badge">WhatsApp updates</span>
-      </div>
-      <div class="cta-row">
-        <a class="btn btn-primary" href="#screens">View the platform</a>
-        <a class="btn btn-secondary" href="#features">Explore features</a>
+
+
+<section class="hero enterprise-hero enterprise-hero-v2 reveal" id="overview">
+  <div class="enterprise-hero-bg" aria-hidden="true">
+    <span class="hero-orb orb-a"></span>
+    <span class="hero-orb orb-b"></span>
+    <span class="hero-orb orb-c"></span>
+    <span class="hero-particle p1"></span>
+    <span class="hero-particle p2"></span>
+    <span class="hero-particle p3"></span>
+    <span class="hero-particle p4"></span>
+    <span class="hero-particle p5"></span>
+    <span class="hero-line line-a"></span>
+    <span class="hero-line line-b"></span>
+  </div>
+
+  <div class="wrap enterprise-hero-v2-grid">
+    <div class="enterprise-hero-v2-copy">
+      <div class="enterprise-hero-badge">
+        <span></span>
+        PrimeTrove OS Enterprise Edition 2026
       </div>
 
-      <div class="trust-strip">
-        <div class="trust-item"><span class="trust-icon">✓</span><span>Clear scope before development</span></div>
-        <div class="trust-item"><span class="trust-icon">🔒</span><span>Protected admin access</span></div>
-        <div class="trust-item"><span class="trust-icon">⚙</span><span>Customised to your workflow</span></div>
-        <div class="trust-item"><span class="trust-icon">↗</span><span>Built for future expansion</span></div>
+      <h1>One operating system for modern businesses.</h1>
+
+      <p class="lead">
+        Manage your website, customers, bookings, orders, staff, WhatsApp communication,
+        reports and branch operations from one secure platform.
+      </p>
+
+      <div class="enterprise-hero-v2-actions">
+        <a class="enterprise-primary-btn" href="#contact">Book a live consultation <span>→</span></a>
+        <a class="enterprise-secondary-btn" href="#product-film">
+          <span class="tour-play">▶</span>
+          Watch product tour
+        </a>
+      </div>
+
+      <div class="enterprise-mini-proof">
+        <div class="proof-avatars" aria-hidden="true">
+          <span>R</span><span>S</span><span>C</span><span>H</span>
+        </div>
+        <div>
+          <strong>Built for growing customer-facing businesses</strong>
+          <small>Retail, hospitality, clinics, salons, education and services</small>
+        </div>
+      </div>
+
+      <div class="enterprise-proof-grid compact">
+        <div><b data-counter="2500">0</b><span>workflows supported</span></div>
+        <div><b data-counter="18">0</b><span>million interactions</span></div>
+        <div><b data-counter="28">0</b><span>markets supported</span></div>
       </div>
     </div>
-    
-    <div class="hero-stage universal-stage" aria-label="Animated connected business workflow preview">
-      <div class="live-pill"><span></span> LIVE PLATFORM</div>
 
-      <div class="business-flow-card">
-        <div class="flow-browser-bar">
-          <span></span><span></span><span></span>
-          <b>yourbusiness.com</b>
+    <div class="enterprise-hero-v2-product" id="enterpriseHeroProduct">
+      <div class="dashboard-halo halo-one"></div>
+      <div class="dashboard-halo halo-two"></div>
+
+      <div class="enterprise-dashboard-window enterprise-dashboard-window-v2">
+        <div class="enterprise-browser-top">
+          <div class="enterprise-browser-dots"><span></span><span></span><span></span></div>
+          <div class="enterprise-browser-address">app.primetroveos.com</div>
+          <div class="enterprise-live-state"><i></i> LIVE</div>
         </div>
 
-        <div class="flow-layout">
-          <div class="flow-storefront">
-            <div class="flow-label">CUSTOMER WEBSITE</div>
-            <div class="flow-hero-mini">
+        <div class="enterprise-dashboard-shell">
+          <aside class="enterprise-sidebar">
+            <div class="enterprise-sidebar-brand"><span>P</span><b>PrimeTrove OS</b></div>
+            <nav>
+              <a class="active">Overview</a>
+              <a>Customers</a>
+              <a>Bookings</a>
+              <a>Orders</a>
+              <a>Messages</a>
+              <a>Reports</a>
+            </nav>
+            <div class="enterprise-user-mini">
+              <i>AM</i>
+              <span><b>Admin</b><small>Online</small></span>
+            </div>
+          </aside>
+
+          <main class="enterprise-dashboard-main">
+            <div class="enterprise-dashboard-head">
               <div>
-                <small>NEW COLLECTION / SERVICES</small>
-                <strong>Shop, book or enquire online</strong>
+                <small>LIVE BUSINESS OVERVIEW</small>
+                <h3>Good afternoon</h3>
               </div>
-              <button type="button">Explore</button>
+              <button type="button">Open customer website</button>
             </div>
 
-            <div class="flow-products">
-              <div class="flow-product">
-                <div class="flow-thumb thumb-one">A</div>
-                <div><b>Featured item</b><small>Available today</small></div>
-                <span>+</span>
-              </div>
-              <div class="flow-product">
-                <div class="flow-thumb thumb-two">B</div>
-                <div><b>Popular service</b><small>Book a time</small></div>
-                <span>+</span>
-              </div>
+            <div class="enterprise-kpi-grid">
+              <article>
+                <span>Revenue today</span>
+                <strong data-live-number="42815">$42,815</strong>
+                <small>+12.8% today</small>
+              </article>
+              <article>
+                <span>New customers</span>
+                <strong data-live-number="221">221</strong>
+                <small>18 active now</small>
+              </article>
+              <article>
+                <span>Bookings</span>
+                <strong data-live-number="84">84</strong>
+                <small>11 awaiting action</small>
+              </article>
+              <article>
+                <span>Open tasks</span>
+                <strong data-live-number="19">19</strong>
+                <small>Across 4 branches</small>
+              </article>
             </div>
 
-            <div class="flow-cart">
-              <span><b>Customer action</b><small>2 items / 1 booking request</small></span>
-              <button type="button">Submit</button>
-            </div>
-          </div>
+            <div class="enterprise-dashboard-lower">
+              <section class="enterprise-chart-card">
+                <div class="enterprise-card-head">
+                  <span><b>Weekly activity</b><small>All branches</small></span>
+                  <em>+18.4%</em>
+                </div>
+                <div class="enterprise-chart">
+                  <i style="--h:34%"></i>
+                  <i style="--h:52%"></i>
+                  <i style="--h:46%"></i>
+                  <i style="--h:72%"></i>
+                  <i style="--h:64%"></i>
+                  <i style="--h:88%"></i>
+                  <i style="--h:78%"></i>
+                </div>
+                <div class="enterprise-chart-labels">
+                  <span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span>
+                </div>
+              </section>
 
-          <div class="flow-admin">
-            <div class="flow-label">BUSINESS OPERATIONS</div>
-            <div class="flow-alert">
-              <i></i>
-              <span><b>New customer request</b><small>Needs staff attention</small></span>
+              <section class="enterprise-activity-card">
+                <div class="enterprise-card-head">
+                  <span><b>Live activity</b><small>Updating now</small></span>
+                  <i class="enterprise-online-dot"></i>
+                </div>
+                <div class="enterprise-activity-feed">
+                  <div><i>✓</i><span><b>Payment received</b><small>$1,280 · Retail branch</small></span></div>
+                  <div><i>+</i><span><b>New booking</b><small>10:30 AM · Service team</small></span></div>
+                  <div><i>W</i><span><b>WhatsApp delivered</b><small>Customer confirmation</small></span></div>
+                  <div><i>U</i><span><b>New customer</b><small>Profile created automatically</small></span></div>
+                </div>
+              </section>
             </div>
-            <div class="flow-stats">
-              <div><small>New</small><b>1</b></div>
-              <div><small>Active</small><b>3</b></div>
-              <div><small>Completed</small><b>18</b></div>
-            </div>
-            <div class="flow-order">
-              <span><b>REQ-1058</b><small>Online · Main Branch</small></span>
-              <button type="button">Confirm</button>
-            </div>
-            <div class="flow-progress">
-              <span class="done">Received</span>
-              <span class="active">Confirmed</span>
-              <span>In progress</span>
-              <span>Completed</span>
-            </div>
-          </div>
+          </main>
         </div>
       </div>
 
-      <div class="float-event event-order universal-event-one">
-        <b>New request received</b>
-        <small>Website → correct branch</small>
+      <div class="enterprise-floating-note note-a">
+        <i>✓</i><span><b>New enquiry received</b><small>Routed to the correct team</small></span>
       </div>
-      <div class="float-event event-whatsapp universal-event-two">
-        <b>WhatsApp update sent</b>
-        <small>Customer confirmation delivered</small>
+      <div class="enterprise-floating-note note-b">
+        <i>$</i><span><b>Payment completed</b><small>Customer account updated</small></span>
       </div>
-      <div class="float-event event-tracking universal-event-three">
-        <b>Live status available</b>
-        <small>Confirmed · In progress</small>
-      </div>
-    </div>
+</div>
   </div>
 </section>
 
-
-
+<section class="enterprise-industry-bar reveal" aria-label="Industries supported">
+  <div class="wrap enterprise-industry-bar-inner">
+    <span>Built for</span>
+    <b>Retail</b>
+    <b>Restaurants</b>
+    <b>Clinics</b>
+    <b>Salons</b>
+    <b>Education</b>
+    <b>Hotels</b>
+    <b>Real estate</b>
+    <b>Service businesses</b>
+  </div>
+</section>
 
 <section class="enterprise-trust reveal">
   <div class="wrap">
@@ -2799,6 +3356,63 @@ body{padding-bottom:88px}
 
 
 
+
+
+<script>
+(function(){
+  const hero = document.querySelector('.enterprise-hero');
+  const product = document.getElementById('enterpriseHeroProduct');
+
+  // Entrance counters
+  const counters = Array.from(document.querySelectorAll('[data-counter]'));
+  const counterObserver = new IntersectionObserver(function(entries, observer){
+    entries.forEach(function(entry){
+      if(!entry.isIntersecting) return;
+      const el = entry.target;
+      const target = Number(el.dataset.counter || 0);
+      const duration = 1400;
+      const start = performance.now();
+
+      function tick(now){
+        const progress = Math.min(1, (now - start) / duration);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        const value = Math.floor(target * eased);
+        el.textContent = target >= 1000 ? value.toLocaleString() + '+' : value + (target === 18 ? 'M+' : target === 28 ? '+' : '');
+        if(progress < 1) requestAnimationFrame(tick);
+      }
+
+      requestAnimationFrame(tick);
+      observer.unobserve(el);
+    });
+  }, {threshold:.4});
+
+  counters.forEach(function(counter){ counterObserver.observe(counter); });
+
+  // Subtle mouse parallax
+  if(hero && product && window.matchMedia('(pointer:fine)').matches){
+    hero.addEventListener('mousemove', function(event){
+      const rect = hero.getBoundingClientRect();
+      const x = (event.clientX - rect.left) / rect.width - .5;
+      const y = (event.clientY - rect.top) / rect.height - .5;
+      product.style.transform = 'translate3d(' + (x * 8) + 'px,' + (y * 8) + 'px,0)';
+    });
+    hero.addEventListener('mouseleave', function(){
+      product.style.transform = '';
+    });
+  }
+
+  // Live KPI movement
+  const liveNumbers = Array.from(document.querySelectorAll('[data-live-number]'));
+  window.setInterval(function(){
+    liveNumbers.forEach(function(el, index){
+      const base = Number(el.dataset.liveNumber || 0);
+      const change = index === 0 ? Math.floor(Math.random() * 18) : Math.floor(Math.random() * 3);
+      const value = base + change;
+      el.textContent = index === 0 ? '$' + value.toLocaleString() : value.toLocaleString();
+    });
+  }, 3200);
+})();
+</script>
 
 </body>
 </html>
