@@ -4609,6 +4609,233 @@ body{padding-bottom:88px}
 
 
 
+
+<style id="website-dashboard-hero-swap">
+/* Only enhances the existing hero visual: website first, dashboard second. */
+#enterpriseHeroProduct{
+  position:relative!important;
+  overflow:visible!important;
+}
+.hero-swap-caption{
+  position:absolute;
+  left:20px;
+  top:-62px;
+  z-index:20;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  color:#fff;
+  transition:opacity .55s ease,transform .55s ease;
+}
+.hero-swap-step{
+  width:34px;height:34px;border-radius:10px;
+  display:grid;place-items:center;
+  background:#e7ad36;color:#173d2f;font-weight:950;font-size:12px;
+  box-shadow:0 9px 24px rgba(0,0,0,.18)
+}
+.hero-swap-caption small{
+  display:block;color:#cce2d8;font-size:9px;font-weight:850;letter-spacing:.16em;margin-bottom:2px
+}
+.hero-swap-caption strong{
+  display:block;font-size:18px;line-height:1.05;letter-spacing:.02em;color:#fff
+}
+
+.hero-website-preview{
+  position:absolute;
+  inset:0;
+  z-index:8;
+  display:grid;
+  place-items:center;
+  opacity:1;
+  transform:translateX(0) scale(1);
+  transition:opacity .8s cubic-bezier(.2,.8,.2,1),transform .8s cubic-bezier(.2,.8,.2,1);
+  pointer-events:none;
+}
+#enterpriseHeroProduct.show-dashboard .hero-website-preview{
+  opacity:0;
+  transform:translateX(-28px) scale(.975);
+}
+#enterpriseHeroProduct .enterprise-dashboard-window-v2{
+  opacity:0;
+  transform:translateX(28px) scale(.975)!important;
+  transition:opacity .8s cubic-bezier(.2,.8,.2,1),transform .8s cubic-bezier(.2,.8,.2,1)!important;
+}
+#enterpriseHeroProduct.show-dashboard .enterprise-dashboard-window-v2{
+  opacity:1;
+  transform:none!important;
+}
+
+.hero-site-browser{
+  width:min(100%,690px);
+  background:#fff;
+  border:1px solid rgba(255,255,255,.55);
+  border-radius:22px;
+  overflow:hidden;
+  box-shadow:0 34px 90px rgba(0,0,0,.30);
+}
+.hero-site-browserbar{
+  height:42px;background:#edf2ef;border-bottom:1px solid #dae2de;
+  display:grid;grid-template-columns:90px 1fr 90px;align-items:center;padding:0 13px
+}
+.hero-site-dots{display:flex;gap:6px}
+.hero-site-dots i{width:9px;height:9px;border-radius:50%;background:#b8c5bf}
+.hero-site-dots i:first-child{background:#df7467}.hero-site-dots i:nth-child(2){background:#e1b85a}.hero-site-dots i:nth-child(3){background:#57ae76}
+.hero-site-address{justify-self:center;background:#fff;border:1px solid #dce5e1;border-radius:8px;padding:5px 28px;font-size:8px;color:#75877f;font-weight:800}
+.hero-site-status{justify-self:end;font-size:8px;color:#0a7952;font-weight:900}
+.hero-site-status i{display:inline-block;width:7px;height:7px;border-radius:50%;background:#24b877;margin-right:5px}
+
+.hero-site-nav{
+  height:58px;display:flex;align-items:center;padding:0 22px;gap:18px;border-bottom:1px solid #edf1ef;background:#fff
+}
+.hero-site-logo{display:flex;align-items:center;gap:8px;color:#183d30;font-size:11px}
+.hero-site-logo span{width:29px;height:29px;border-radius:9px;background:#e7ad36;display:grid;place-items:center;font:900 15px Georgia;color:#173d2f}
+.hero-site-links{margin-left:auto;display:flex;gap:16px;font-size:8px;color:#65786f;font-weight:750}
+.hero-site-nav button{border:0;background:#0c6548;color:#fff;border-radius:8px;padding:8px 11px;font-size:8px;font-weight:900}
+
+.hero-site-content{
+  min-height:335px;
+  display:grid;grid-template-columns:.92fr 1.08fr;gap:20px;align-items:center;
+  padding:34px 28px;
+  background:
+    radial-gradient(circle at 87% 18%,rgba(231,173,54,.21),transparent 28%),
+    linear-gradient(135deg,#fbf6eb,#edf6f1);
+}
+.hero-site-copy small{font-size:8px;letter-spacing:.14em;color:#a97416;font-weight:950}
+.hero-site-copy h3{font:700 34px/1 Georgia,serif;color:#143b2f;margin:10px 0 12px}
+.hero-site-copy h3 em{font-style:normal;color:#c4891c}
+.hero-site-copy p{font-size:10px;color:#65766e;line-height:1.55;margin:0 0 17px}
+.hero-site-buttons{display:flex;gap:11px;align-items:center;font-size:8px}
+.hero-site-buttons b{background:#e7ad36;color:#173d2f;border-radius:8px;padding:9px 11px}
+.hero-site-buttons span{color:#184b3a;font-weight:900}
+.hero-site-proof{display:flex;flex-wrap:wrap;gap:6px;margin-top:17px}
+.hero-site-proof span{font-size:7px;padding:5px 7px;border-radius:99px;background:#e5f3ec;color:#166246;font-weight:850}
+
+.hero-site-art{min-height:265px;position:relative}
+.hero-site-photo{
+  position:absolute;inset:12px 10px 10px 6px;border-radius:19px;overflow:visible;
+  background:
+    linear-gradient(135deg,rgba(12,81,59,.9),rgba(12,81,59,.36)),
+    radial-gradient(circle at 70% 32%,#e7ad36 0 12%,transparent 13%),
+    linear-gradient(135deg,#296b50,#e9c77f);
+  box-shadow:0 22px 50px rgba(13,70,51,.18)
+}
+.hero-site-photo::before{
+  content:"";position:absolute;left:24px;bottom:26px;width:54%;height:38%;border-radius:14px;background:rgba(255,255,255,.92)
+}
+.hero-site-photo::after{
+  content:"";position:absolute;left:42px;bottom:51px;width:29%;height:7px;border-radius:99px;background:#d8e5df;box-shadow:0 15px 0 #e7ad36,0 30px 0 #dfe8e3
+}
+.hero-site-card{
+  position:absolute;background:#fff;border:1px solid #dce5e0;border-radius:12px;padding:10px 11px;
+  box-shadow:0 14px 32px rgba(5,51,36,.16);color:#1b4234
+}
+.hero-site-card b{display:block;font-size:8px}.hero-site-card small{display:block;font-size:6px;color:#84928c;margin-top:2px}
+.hero-site-card.card-a{left:-24px;top:25px}
+.hero-site-card.card-b{right:-14px;top:78px}
+.hero-site-phone{
+  position:absolute;right:22px;bottom:-20px;width:105px;height:180px;border-radius:18px;background:#fff;border:6px solid #193b30;
+  box-shadow:0 20px 45px rgba(0,0,0,.22);padding:11px;text-align:center;color:#193b30
+}
+.hero-site-phone div{height:70px;border-radius:10px;background:linear-gradient(145deg,#1b5b44,#e6b458);margin-bottom:10px}
+.hero-site-phone strong{display:block;font-size:9px}.hero-site-phone small{display:block;font-size:6px;color:#7c8a84;margin:4px 0 8px}
+.hero-site-phone button{border:0;border-radius:6px;background:#e7ad36;color:#163d30;font-size:7px;font-weight:900;padding:6px 9px}
+
+.hero-site-bottom{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:15px 19px 18px;background:#fff
+}
+.hero-site-bottom article{border:1px solid #e1e8e4;border-radius:11px;padding:10px;background:#fbfdfc}
+.hero-site-bottom i{font-style:normal;color:#c0861b;font-size:7px;font-weight:950}
+.hero-site-bottom b{display:block;color:#183d30;font-size:9px;margin:3px 0}
+.hero-site-bottom small{display:block;color:#788981;font-size:7px}
+
+/* Give the transition a subtle directional cue */
+#enterpriseHeroProduct::after{
+  content:"";
+  position:absolute;left:50%;bottom:-24px;transform:translateX(-50%);
+  width:54px;height:4px;border-radius:99px;background:rgba(255,255,255,.18);
+  box-shadow:-68px 0 0 rgba(231,173,54,.9),68px 0 0 rgba(255,255,255,.18);
+}
+#enterpriseHeroProduct.show-dashboard::after{
+  box-shadow:-68px 0 0 rgba(255,255,255,.18),68px 0 0 rgba(231,173,54,.9);
+}
+
+@media(max-width:1050px){
+  .hero-swap-caption{top:-48px;left:6px}
+  .hero-site-browser{width:min(96%,690px)}
+}
+@media(max-width:700px){
+  .hero-swap-caption{position:relative;left:auto;top:auto;margin:0 0 14px 10px}
+  .hero-site-content{grid-template-columns:1fr;padding:24px 17px}
+  .hero-site-art{min-height:220px}
+  .hero-site-links{display:none}
+}
+</style>
+
+<style id="hero-swap-alignment-fix">
+/* Keep BOTH hero states in exactly the same frame/position. */
+#enterpriseHeroProduct{
+  min-height:650px!important;
+}
+
+/* Website frame */
+#enterpriseHeroProduct .hero-website-preview{
+  position:absolute!important;
+  inset:0!important;
+  display:grid!important;
+  place-items:center!important;
+  transform:none!important;
+}
+#enterpriseHeroProduct .hero-site-browser{
+  width:min(100%,690px)!important;
+  margin:0 auto!important;
+}
+
+/* Dashboard frame — same center, same width, no old floating animation. */
+#enterpriseHeroProduct .enterprise-dashboard-window-v2{
+  position:absolute!important;
+  width:min(100%,690px)!important;
+  max-width:690px!important;
+  left:50%!important;
+  top:50%!important;
+  right:auto!important;
+  bottom:auto!important;
+  margin:0!important;
+  animation:none!important;
+  opacity:0!important;
+  transform:translate(-50%,-50%) scale(.975)!important;
+  transform-origin:center center!important;
+  transition:opacity .8s cubic-bezier(.2,.8,.2,1),transform .8s cubic-bezier(.2,.8,.2,1)!important;
+}
+
+/* When dashboard is active it stays centered instead of jumping right/down. */
+#enterpriseHeroProduct.show-dashboard .enterprise-dashboard-window-v2{
+  opacity:1!important;
+  transform:translate(-50%,-50%) scale(1)!important;
+}
+
+/* Website fades in/out without changing its physical alignment. */
+#enterpriseHeroProduct .hero-website-preview{
+  opacity:1!important;
+  transition:opacity .8s cubic-bezier(.2,.8,.2,1),transform .8s cubic-bezier(.2,.8,.2,1)!important;
+}
+#enterpriseHeroProduct.show-dashboard .hero-website-preview{
+  opacity:0!important;
+  transform:translateX(-18px) scale(.985)!important;
+}
+
+/* Dashboard popups remain attached to the centered dashboard. */
+#enterpriseHeroProduct .enterprise-floating-note,
+#enterpriseHeroProduct .float-event{
+  animation-play-state:running;
+}
+
+@media(max-width:1050px){
+  #enterpriseHeroProduct .enterprise-dashboard-window-v2,
+  #enterpriseHeroProduct .hero-site-browser{
+    width:min(96%,690px)!important;
+  }
+}
+</style>
 </head>
 <body>
 <div aria-hidden="true" class="v10-loader" id="v10Loader">
@@ -4653,17 +4880,14 @@ body{padding-bottom:88px}
 <span></span>
         PrimeTrove OS Enterprise Edition 2026
       </div>
-<h1>We build your business website.<span>Then we help you run your entire business.</span></h1>
+<h1>SEE YOUR WEBSITE<span>BEFORE YOU PAY</span></h1>
 <p class="lead">
-        Create your website, manage orders, bookings, customers, staff and WhatsApp
-        from one powerful platform.
+        We build your professional website first, then help you run your business online
+        through one powerful dashboard for orders, bookings, customers, staff and more.
       </p>
 <div class="enterprise-hero-v2-actions">
-<a class="enterprise-primary-btn" href="#contact">GET ME LIVE <span>→</span></a>
-<a class="enterprise-secondary-btn" href="#website-controls">
-<span class="tour-play">▶</span>
-          Watch Live Demo
-        </a>
+<a class="enterprise-primary-btn" href="#contact">ORDER MY FREE SAMPLE <span>→</span></a>
+
 </div>
 <div class="enterprise-value-grid">
 <div><i>🌐</i><span><b>Professional Website</b><small>Designed for your business</small></span></div>
@@ -4673,6 +4897,54 @@ body{padding-bottom:88px}
 </div>
 </div>
 <div class="enterprise-hero-v2-product" id="enterpriseHeroProduct">
+<div class="hero-swap-caption" aria-live="polite">
+  <span class="hero-swap-step">01</span>
+  <div>
+    <small id="heroSwapEyebrow">FIRST, YOUR ONLINE PRESENCE</small>
+    <strong id="heroSwapTitle">WE BUILD YOUR WEBSITE</strong>
+  </div>
+</div>
+
+<div class="hero-website-preview" aria-hidden="true">
+  <div class="hero-site-browser">
+    <div class="hero-site-browserbar">
+      <div class="hero-site-dots"><i></i><i></i><i></i></div>
+      <div class="hero-site-address">www.yourbusiness.com</div>
+      <div class="hero-site-status"><i></i> LIVE</div>
+    </div>
+    <div class="hero-site-nav">
+      <div class="hero-site-logo"><span>Y</span><b>Your Business</b></div>
+      <div class="hero-site-links"><span>Home</span><span>Services</span><span>About</span><span>Contact</span></div>
+      <button type="button">Get in touch</button>
+    </div>
+    <div class="hero-site-content">
+      <div class="hero-site-copy">
+        <small>PROFESSIONAL WEBSITE FOR YOUR BUSINESS</small>
+        <h3>Turn visitors into<br><em>real customers.</em></h3>
+        <p>A modern, mobile-ready website designed around your brand, services and customers.</p>
+        <div class="hero-site-buttons"><b>Explore Services</b><span>Contact Us →</span></div>
+        <div class="hero-site-proof">
+          <span>✓ Mobile ready</span><span>✓ Your branding</span><span>✓ Easy contact</span>
+        </div>
+      </div>
+      <div class="hero-site-art">
+        <div class="hero-site-photo">
+          <div class="hero-site-card card-a"><b>NEW ENQUIRY</b><small>Website form received</small></div>
+          <div class="hero-site-card card-b"><b>4.9 ★</b><small>Customer rating</small></div>
+          <div class="hero-site-phone">
+            <div></div><strong>Your Business</strong><small>Open now</small><button>Contact</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-site-bottom">
+      <article><i>01</i><b>Your Services</b><small>Clearly presented</small></article>
+      <article><i>02</i><b>Easy Enquiries</b><small>Customers contact you</small></article>
+      <article><i>03</i><b>Professional Brand</b><small>Build customer trust</small></article>
+    </div>
+  </div>
+</div>
+
 <div class="dashboard-halo halo-one"></div>
 <div class="dashboard-halo halo-two"></div>
 <div class="enterprise-dashboard-window enterprise-dashboard-window-v2">
@@ -6231,5 +6503,29 @@ body{padding-bottom:88px}
 })();
 </script>
 
+
+<script id="website-dashboard-hero-swap-js">
+(function(){
+  const box = document.getElementById('enterpriseHeroProduct');
+  if(!box) return;
+  const step = box.querySelector('.hero-swap-step');
+  const eyebrow = document.getElementById('heroSwapEyebrow');
+  const title = document.getElementById('heroSwapTitle');
+
+  let dashboard = false;
+  function render(){
+    box.classList.toggle('show-dashboard', dashboard);
+    if(step) step.textContent = dashboard ? '02' : '01';
+    if(eyebrow) eyebrow.textContent = dashboard ? 'THEN, RUN EVERYTHING IN ONE PLACE' : 'FIRST, YOUR ONLINE PRESENCE';
+    if(title) title.textContent = dashboard ? 'WE HELP YOU RUN YOUR BUSINESS THROUGH THE DASHBOARD' : 'WE BUILD YOUR WEBSITE';
+  }
+  render();
+
+  setInterval(function(){
+    dashboard = !dashboard;
+    render();
+  }, 4700);
+})();
+</script>
 </body>
 </html>
