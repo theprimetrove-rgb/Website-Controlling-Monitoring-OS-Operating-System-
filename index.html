@@ -871,6 +871,26 @@ section.final{display:none!important}
 .v12-custom-note p{margin:0;color:#d7e9e0}
 .v12-custom-note a{white-space:nowrap;text-decoration:none;background:#efb43f;color:#183426;padding:13px 18px;border-radius:11px;font-weight:900}
 
+
+.existing-site-service{
+  margin-top:34px;padding:28px;border-radius:24px;background:linear-gradient(135deg,#083e2e,#0b5a40 62%,#117552);
+  color:white;display:grid;grid-template-columns:1.45fr .55fr;gap:28px;align-items:center;
+  box-shadow:0 24px 70px rgba(8,44,32,.16);position:relative;overflow:hidden
+}
+.existing-site-service::after{content:"";position:absolute;width:260px;height:260px;border-radius:50%;right:-120px;top:-130px;background:rgba(255,255,255,.06)}
+.existing-site-kicker{font-size:11px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:#f3c867;margin-bottom:8px}
+.existing-site-service h3{font-size:35px;margin:0 0 10px;color:white}
+.existing-site-service p{color:#d8e9e1;max-width:760px;margin-bottom:16px}
+.existing-site-options{display:flex;flex-wrap:wrap;gap:8px}
+.existing-site-options span{padding:8px 11px;border-radius:999px;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.14);font-size:11px}
+.existing-site-price{position:relative;z-index:2;background:white;color:#123b2d;border-radius:18px;padding:20px;text-align:left}
+.existing-site-price small{display:block;color:#748179;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.08em}
+.existing-site-price strong{display:block;font:700 38px Georgia,serif;color:#0b4f39;margin:5px 0}
+.existing-site-price span{display:block;font-size:12px;color:#617169;margin-bottom:14px}
+.existing-site-cta{display:block;text-align:center;text-decoration:none;background:#e8af3a;color:#183426;padding:12px 14px;border-radius:11px;font-weight:900}
+.existing-site-cta:hover{background:#0b5a40;color:white}
+@media(max-width:820px){.existing-site-service{grid-template-columns:1fr}.existing-site-service h3{font-size:29px}}
+
 /* comparison */
 .v12-compare{padding:100px 0;background:white}
 .v12-table-wrap{overflow:auto;margin-top:40px;border:1px solid #dbe5e0;border-radius:22px;box-shadow:0 18px 55px rgba(8,44,32,.07)}
@@ -6232,75 +6252,88 @@ document.addEventListener('DOMContentLoaded', function () {
 </section>
 <section class="v12-pricing reveal" id="packages">
 <div class="wrap">
-<div class="v11-eyebrow">See packages</div>
-<h2 class="v11-title">Choose the PrimeTrove OS edition that fits your operation.</h2>
-<p class="v11-subtitle">These are one-time project rates for the platform we have already designed: branded website, protected PrimeTrove OS dashboard, orders, reservations, branches, customer records and operational workflows. Hosting, domain, payment-gateway charges and third-party services are separate where applicable.</p>
+<div class="v11-eyebrow">Simple packages</div>
+<h2 class="v11-title">Start with what your business actually needs.</h2>
+<p class="v11-subtitle">Choose a new-website package below, or use our repair and maintenance service if you already have a website. Hosting, domain, payment-gateway charges and paid third-party services are separate where applicable.</p>
 <div class="v12-pricing-grid">
 <article class="v12-plan">
 <div class="v12-plan-icon">◫</div>
-<h3>Starter</h3>
-<div class="v12-plan-sub">For one location that needs a professional digital setup.</div>
-<div class="v12-price">AED 1800</div>
-<div class="v12-delivery">Estimated delivery: 7–10 working days</div>
+<h3>Website Launch</h3>
+<div class="v12-plan-sub">For a small business that needs a clean, professional online presence.</div>
+<div class="v12-price">AED 500</div>
+<div class="v12-delivery">Estimated delivery: 5–7 working days</div>
 <ul class="v12-feature-list">
-<li>Branded, mobile-responsive customer website</li>
-<li>Single-branch setup</li>
-<li>Online pickup and delivery ordering</li>
-<li>Reservation request form</li>
-<li>Protected PrimeTrove OS admin dashboard</li>
-<li>Menu and product management</li>
-<li>Customer directory and order history</li>
-<li>WhatsApp order communication</li>
-<li>Basic launch support</li>
+<li>Custom branded business website</li>
+<li>Mobile-responsive layout</li>
+<li>Services or products showcase</li>
+<li>Contact and WhatsApp buttons</li>
+<li>Enquiry / contact form</li>
+<li>Google Maps and social links</li>
+<li>Basic content setup</li>
+<li>Launch support</li>
 </ul>
-<a class="v12-plan-cta" data-package="Starter" data-request="quote" href="#contact">Choose Starter</a>
+<a class="v12-plan-cta" data-package="Website Launch" data-request="quote" href="#contact">Get Website Launch</a>
 </article>
 <article class="v12-plan popular">
 <div class="v12-plan-badge">Most popular</div>
 <div class="v12-plan-icon">◉</div>
-<h3>Professional</h3>
-<div class="v12-plan-sub">For growing brands with several branches or more active operations.</div>
-<div class="v12-price">AED 5,500</div>
-<div class="v12-delivery">Estimated delivery: 2–3 weeks</div>
+<h3>Business Growth</h3>
+<div class="v12-plan-sub">For businesses that want their website to do more than just look good.</div>
+<div class="v12-price">AED 850</div>
+<div class="v12-delivery">Estimated delivery: 7–12 working days</div>
 <ul class="v12-feature-list">
-<li>Everything included in Starter</li>
-<li>Multi-branch administration</li>
-<li>Branch-specific menus and availability</li>
-<li>Live order workflow and active-work alerts</li>
-<li>Reservation and table-map management</li>
-<li>Customer memory and repeat-customer tracking</li>
-<li>Operational dashboard with today’s activity</li>
-<li>Promotional hero and website controls</li>
-<li>Staff access roles</li>
+<li>Everything included in Website Launch</li>
+<li>Online booking, reservation or order flow</li>
+<li>Business-specific forms and customer actions</li>
+<li>Enhanced WhatsApp customer journey</li>
+<li>Website content controls</li>
+<li>Customer enquiry management</li>
+<li>Promotional sections and stronger conversion CTAs</li>
 <li>Priority launch support</li>
 </ul>
-<a class="v12-plan-cta" data-package="Professional" data-request="quote" href="#contact">Choose Professional</a>
+<a class="v12-plan-cta" data-package="Business Growth" data-request="quote" href="#contact">Choose Business Growth</a>
 </article>
 <article class="v12-plan">
 <div class="v12-plan-icon">⚙</div>
-<h3>Enterprise</h3>
-<div class="v12-plan-sub">For established businesses needing custom workflows or integrations.</div>
-<div class="v12-price">From AED 12,000</div>
-<div class="v12-delivery">Delivery depends on the agreed scope</div>
+<h3>Business Control</h3>
+<div class="v12-plan-sub">For businesses that want the website plus a protected management dashboard.</div>
+<div class="v12-price">AED 1,200</div>
+<div class="v12-delivery">Estimated delivery: 10–15 working days</div>
 <ul class="v12-feature-list">
-<li>Everything included in Professional</li>
-<li>Fully customised visual design</li>
-<li>Custom operational workflows</li>
-<li>Inventory or stock integrations</li>
-<li>Loyalty, membership or QR-ordering modules</li>
-<li>Kitchen or fulfilment display systems</li>
-<li>Payment-gateway integration</li>
-<li>External API integrations</li>
-<li>Cloud deployment assistance</li>
-<li>Dedicated expansion roadmap</li>
+<li>Everything included in Business Growth</li>
+<li>Protected PrimeTrove OS admin dashboard</li>
+<li>Manage bookings, orders or enquiries</li>
+<li>Customer records and activity history</li>
+<li>Business activity overview</li>
+<li>Custom dashboard workflow for your business</li>
+<li>Staff / admin access controls where required</li>
+<li>Priority setup and support</li>
 </ul>
-<a class="v12-plan-cta" data-package="Enterprise" data-request="quote" href="#contact">Request Proposal</a>
+<a class="v12-plan-cta" data-package="Business Control" data-request="quote" href="#contact">Get Business Control</a>
 </article>
 </div>
+
+<div class="existing-site-service">
+  <div class="existing-site-copy">
+    <div class="existing-site-kicker">Already have a website?</div>
+    <h3>We can repair, redesign and maintain it.</h3>
+    <p>You do not need a new website to work with PrimeTrove. We can fix what is broken, improve the design, make it mobile-friendly, update content and keep it maintained.</p>
+    <div class="existing-site-options">
+      <span>Website repairs</span><span>Design upgrades</span><span>Mobile fixes</span><span>Broken buttons &amp; forms</span><span>Content updates</span><span>Booking/contact-flow improvements</span>
+    </div>
+  </div>
+  <div class="existing-site-price">
+    <small>One-time fixes from</small>
+    <strong>AED 250</strong>
+    <span>Ongoing website care from <b>AED 150/month</b></span>
+    <a class="existing-site-cta" data-package="Website Repair &amp; Maintenance" data-request="quote" href="#contact">Get My Website Fixed</a>
+  </div>
+</div>
+
 <div class="v12-custom-note">
 <div>
-<strong>Need a custom combination?</strong>
-<p>Features can be selected and priced according to the actual business workflow. The final scope is agreed before development begins.</p>
+<strong>Need something different?</strong>
+<p>We can quote a custom combination based on your website, business workflow and the exact features you need.</p>
 </div>
 <a data-package="Custom" data-request="quote" href="#contact">Request custom quotation</a>
 </div>
@@ -6311,8 +6344,8 @@ document.addEventListener('DOMContentLoaded', function () {
 <div class="v11-eyebrow">Frequently asked questions</div>
 <h2 class="v11-title">Important questions before starting a project.</h2>
 <div class="v12-faq-list">
-<details><summary>Can PrimeTrove OS work for several branches?</summary><p>Yes. The Professional and Enterprise editions can organise orders, reservations, customers, menus and table information by branch.</p></details>
-<details><summary>Can the website design be customised?</summary><p>Yes. Brand colours, typography, imagery, homepage structure, menu presentation and customer journey can be adapted. Extensive custom design is included in the Enterprise scope.</p></details>
+<details><summary>Can PrimeTrove OS work for several branches?</summary><p>Yes. Business Growth can support booking, reservation or order flows, while Business Control adds a protected dashboard and can be customised for more advanced or multi-location operations.</p></details>
+<details><summary>Can the website design be customised?</summary><p>Yes. All new website packages are branded for the business. Business Growth adds a more conversion-focused customer journey, while Business Control can include a more customised website and dashboard workflow.</p></details>
 <details><summary>Are hosting, domain and payment-gateway charges included?</summary><p>No. The package prices cover design and development of the agreed platform. Hosting, domain registration, payment-gateway fees and paid third-party services are billed separately.</p></details>
 <details><summary>Can online payments be added?</summary><p>Yes. A suitable payment gateway can be integrated as a separately scoped feature, subject to the provider’s technical requirements and commercial approval.</p></details>
 <details><summary>Is there a monthly software fee?</summary><p>The rates shown are one-time development prices. Ongoing hosting, maintenance, support or third-party subscriptions can be arranged separately if required.</p></details>
